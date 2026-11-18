@@ -1,0 +1,1159 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>TigerFlow — le logiciel des entreprises antinuisibles | Finissez vos journées à 18 h</title>
+<meta name="description" content="Planning, techniciens, devis, factures et encaissement : TigerFlow fait le travail de bureau pendant que vous êtes sur le terrain. 14 jours gratuits, sans carte bancaire.">
+<meta property="og:locale" content="fr_FR">
+<meta property="og:type" content="website">
+<meta property="og:title" content="TigerFlow — le logiciel des entreprises antinuisibles">
+<meta property="og:description" content="Planning, techniciens, devis, factures et encaissement dans un seul outil. 14 jours gratuits, sans carte bancaire.">
+<meta property="og:image" content="https://tigerflowteam-art.github.io/landing/og-tigerflow.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image" content="https://tigerflowteam-art.github.io/landing/og-tigerflow.jpg">
+<meta name="theme-color" content="#101216">
+<link rel="icon" type="image/png" href="tf-favicon.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Sora:wght@600;700;800&display=swap" rel="stylesheet">
+<script type="application/ld+json">[{"@context": "https://schema.org", "@type": "SoftwareApplication", "name": "TigerFlow", "applicationCategory": "BusinessApplication", "operatingSystem": "Web, iOS, Android", "description": "Logiciel de gestion pour les entreprises antinuisibles : planning, techniciens, devis, factures et encaissement.", "inLanguage": "fr", "offers": [{"@type": "Offer", "name": "Gratuit", "price": "0", "priceCurrency": "EUR"}, {"@type": "Offer", "name": "Équipe", "price": "39", "priceCurrency": "EUR", "description": "HT par utilisateur et par mois"}, {"@type": "Offer", "name": "Pro", "price": "49", "priceCurrency": "EUR", "description": "HT par utilisateur et par mois"}]}, {"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "Je dois donner ma carte pour l'essai ?", "acceptedAnswer": {"@type": "Answer", "text": "Non. 14 jours d'essai sans carte bancaire. À la fin, vous décidez."}}, {"@type": "Question", "name": "J'ai 800 clients dans Excel, je fais comment ?", "acceptedAnswer": {"@type": "Answer", "text": "Vous nous envoyez le fichier, on l'importe pour vous, gratuitement, sous 24 h. Zéro ligne à ressaisir."}}, {"@type": "Question", "name": "Mes techniciens ne sont pas à l'aise avec les logiciels.", "acceptedAnswer": {"@type": "Answer", "text": "L'appli technicien a trois boutons : ma journée, mon intervention, mon rapport. S'ils savent envoyer un SMS, ils savent utiliser TigerFlow."}}, {"@type": "Question", "name": "Est-ce que ça gère les contrats annuels avec les syndics ?", "acceptedAnswer": {"@type": "Answer", "text": "Oui. Un contrat, ce sont des passages planifiés d'avance et des factures qui partent à la bonne date, sans y penser."}}, {"@type": "Question", "name": "Et si j'arrête ?", "acceptedAnswer": {"@type": "Answer", "text": "Vous résiliez quand vous voulez depuis votre espace, et vous récupérez toutes vos données."}}, {"@type": "Question", "name": "Où sont stockées mes données ?", "acceptedAnswer": {"@type": "Answer", "text": "En Europe, chez Amazon Web Services. Elles sont sauvegardées chaque jour."}}]}]</script>
+<script>document.documentElement.className="js"</script>
+<style>
+:root{
+  --o:#FF5A1F; --o-d:#E64A12; --o-l:#FFF1EA; --ink:#101216; --ink2:#1B1E25;
+  --txt:#3D434E; --mut:#6B7280; --line:#E7E9EE; --bg:#FBF6F1; --ok:#12B76A;
+  --r:18px; --sh:0 1px 2px rgba(16,18,22,.05),0 12px 32px -12px rgba(16,18,22,.14);
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth;scroll-padding-top:84px}
+body{font-family:Inter,system-ui,-apple-system,"Segoe UI",sans-serif;color:var(--txt);background:#fff;line-height:1.6;font-size:17px;-webkit-font-smoothing:antialiased}
+img{max-width:100%;display:block;height:auto}
+a{color:inherit;text-decoration:none}
+h1,h2,h3{font-family:Sora,Inter,sans-serif;color:var(--ink);line-height:1.12;letter-spacing:-.02em}
+h1{font-size:clamp(2.3rem,6.2vw,4.4rem);font-weight:800}
+h2{font-size:clamp(1.7rem,3.8vw,2.7rem);font-weight:700}
+h3{font-size:1.2rem;font-weight:700;letter-spacing:-.01em}
+em{font-style:normal;color:var(--o)}
+.w{max-width:1160px;margin:0 auto;padding:0 24px}
+.sec{padding:96px 0}
+.eyebrow{font:600 .74rem/1 Inter,sans-serif;letter-spacing:.14em;text-transform:uppercase;color:var(--o);margin-bottom:16px}
+.lead{font-size:1.1rem;max-width:640px;margin-top:18px}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;font:600 1rem/1 Inter,sans-serif;padding:16px 26px;border-radius:12px;border:1px solid transparent;cursor:pointer;transition:transform .15s,background .15s,box-shadow .15s;white-space:nowrap}
+.btn svg{width:18px;height:18px}
+.btn-o{background:var(--o);color:#fff;box-shadow:0 10px 24px -10px rgba(255,90,31,.7)}
+.btn-o:hover{background:var(--o-d);transform:translateY(-1px)}
+.btn-w{background:#fff;color:var(--ink);border-color:var(--line)}
+.btn-w:hover{border-color:#C9CDD6}
+.btn-k{background:var(--ink);color:#fff;padding:12px 18px;font-size:.92rem}
+.btn-k:hover{background:#000}
+.btn-full{width:100%}
+
+/* nav */
+header{position:sticky;top:0;z-index:50;background:rgba(255,255,255,.9);backdrop-filter:saturate(1.4) blur(12px);border-bottom:1px solid transparent;transition:border-color .2s}
+header.scrolled{border-color:var(--line)}
+.nav{display:flex;align-items:center;justify-content:space-between;height:72px}
+.logo{display:flex;align-items:center}
+.logo img{height:38px;width:auto}
+.wordmark{font:800 1.25rem/1 Sora,sans-serif;letter-spacing:.02em;color:var(--ink)}
+.wordmark b{color:var(--o);font-weight:800}
+.nav nav{display:flex;align-items:center;gap:28px;font-size:.93rem;font-weight:500;color:var(--ink)}
+.nav nav a:not(.btn):hover{color:var(--o)}
+@media(max-width:860px){.nav nav a:not(.btn){display:none}}
+
+/* hero */
+.hero{padding:72px 0 0;text-align:center;background:radial-gradient(900px 420px at 50% -80px,#FFE9DE 0,rgba(255,233,222,0) 70%)}
+.hero p.sub{font-size:clamp(1.05rem,1.6vw,1.25rem);max-width:660px;margin:22px auto 0}
+.cta{display:flex;gap:12px;justify-content:center;flex-wrap:wrap;margin-top:34px}
+.ticks{display:flex;gap:8px 26px;justify-content:center;flex-wrap:wrap;margin-top:22px;font-size:.92rem;color:var(--ink);font-weight:500;list-style:none}
+.ticks li{display:flex;align-items:center;gap:8px}
+.ticks svg{width:16px;height:16px;color:var(--ok)}
+.frame{border-radius:16px;overflow:hidden;background:#fff;border:1px solid var(--line);box-shadow:0 2px 4px rgba(16,18,22,.04),0 40px 80px -30px rgba(16,18,22,.35)}
+.frame .bar{height:34px;background:#F1F2F5;border-bottom:1px solid var(--line);display:flex;align-items:center;gap:7px;padding:0 14px}
+.frame .bar i{width:10px;height:10px;border-radius:50%;background:#D5D8DF;display:block}
+.frame .bar span{margin-left:14px;font-size:.72rem;color:var(--mut);background:#fff;border:1px solid var(--line);border-radius:6px;padding:2px 12px}
+.hero-shot{position:relative;max-width:1120px;margin:64px auto -120px;z-index:2}
+.hero .frame{margin:0;position:relative}
+.after-hero{padding-top:176px}
+figcaption{font-size:.84rem;color:var(--mut);margin-top:12px;text-align:center}
+
+/* problème */
+.grid3{display:grid;grid-template-columns:repeat(3,1fr);gap:20px;margin-top:48px}
+.card{background:var(--bg);border-radius:var(--r);padding:28px}
+.ic{width:44px;height:44px;border-radius:12px;background:#fff;display:grid;place-items:center;color:var(--o);margin-bottom:18px;box-shadow:0 1px 2px rgba(16,18,22,.06)}
+.ic svg{width:22px;height:22px}
+.card p{margin-top:8px;font-size:.98rem}
+@media(max-width:860px){.grid3{grid-template-columns:1fr}}
+
+/* produit */
+.prod{background:var(--bg)}
+.row{display:grid;grid-template-columns:5fr 7fr;gap:56px;align-items:center;margin-top:88px}
+.row:first-of-type{margin-top:64px}
+.row.rev{grid-template-columns:7fr 5fr}.row.rev>.txt{order:2}
+.step{display:inline-flex;align-items:center;gap:10px;font:600 .8rem/1 Inter,sans-serif;color:var(--o);background:var(--o-l);padding:8px 12px;border-radius:999px;margin-bottom:16px}
+.row h3{font-size:clamp(1.4rem,2.4vw,1.85rem)}
+.row .txt p{margin-top:14px}
+.row ul{list-style:none;margin-top:18px;display:grid;gap:10px}
+.row li{display:flex;gap:10px;font-size:.97rem;color:var(--ink)}
+.row li svg{flex:none;width:18px;height:18px;color:var(--ok);margin-top:4px}
+.shot{border-radius:14px;overflow:hidden;border:1px solid var(--line);background:#fff;box-shadow:var(--sh)}
+.shot.narrow{max-width:440px;margin:0 auto}
+.soon{font:600 .68rem/1 Inter,sans-serif;letter-spacing:.06em;text-transform:uppercase;background:#101216;color:#fff;border-radius:999px;padding:4px 8px;margin-left:6px;vertical-align:middle}
+@media(max-width:900px){.row,.row.rev{grid-template-columns:1fr;gap:28px;margin-top:64px}.row.rev>.txt{order:0}}
+
+/* relances */
+.dark{background:var(--ink);color:#C5C9D2}
+.dark h2{color:#fff}
+.two{display:grid;grid-template-columns:1fr 1fr;gap:24px;margin-top:48px}
+.panel{background:#fff;color:var(--txt);border-radius:var(--r);padding:28px;border:1px solid var(--line);box-shadow:var(--sh)}
+.panel-h{display:flex;justify-content:space-between;gap:12px;font-size:.9rem;padding-bottom:16px;border-bottom:1px solid var(--line);margin-bottom:8px}
+.panel-h b{color:var(--ink)}
+.tl{list-style:none}
+.tl li{display:flex;gap:14px;padding:14px 0;align-items:flex-start}
+.tl .dot{flex:none;width:38px;height:38px;border-radius:50%;background:var(--ink);color:#fff;font:600 .72rem/38px Inter,sans-serif;text-align:center}
+.tl .dot.ok{background:var(--ok)}
+.tl .dot.off{background:#EEF0F4;color:#A0A6B2}
+.tl b{display:block;color:var(--ink);font-size:.98rem}
+.tl span{font-size:.88rem;color:var(--mut)}
+.tl .off-t b,.tl .off-t span{color:#A0A6B2}
+label.sl{display:flex;justify-content:space-between;align-items:baseline;font:600 .74rem/1 Inter,sans-serif;letter-spacing:.1em;text-transform:uppercase;color:var(--ink);margin-top:22px}
+label.sl output{font:700 1.5rem/1 Sora,sans-serif;letter-spacing:-.01em;text-transform:none}
+input[type=range]{width:100%;margin-top:12px;accent-color:var(--o);height:6px}
+.res{background:#ECFDF3;border-radius:14px;padding:24px;text-align:center;margin-top:26px}
+.res .pill{display:inline-block;background:var(--ok);color:#fff;font:600 .8rem/1 Inter,sans-serif;padding:8px 12px;border-radius:999px}
+.res .big{font:800 clamp(2rem,4vw,2.8rem)/1.1 Sora,sans-serif;color:#067647;margin-top:14px}
+.res .eur{font:700 1.3rem/1.2 Sora,sans-serif;color:var(--ink);margin-top:4px}
+.note{font-size:.84rem;color:var(--mut);margin-top:16px}
+@media(max-width:860px){.two{grid-template-columns:1fr}}
+
+/* modules */
+.mods{display:grid;grid-template-columns:repeat(4,1fr);gap:14px;margin-top:44px}
+.mod{border:1px solid var(--line);border-radius:14px;padding:20px;background:#fff}
+.mod b{display:block;font:700 1rem/1.2 Sora,sans-serif;color:var(--ink)}
+.mod span{display:block;font-size:.88rem;color:var(--mut);margin-top:6px;line-height:1.45}
+@media(max-width:900px){.mods{grid-template-columns:repeat(2,1fr)}}
+@media(max-width:460px){.mods{grid-template-columns:1fr}}
+
+
+/* appli mobile */
+.app{background:var(--ink);color:#C5C9D2}
+.app h2{color:#fff}
+.phones{display:grid;grid-template-columns:repeat(6,1fr);gap:16px;margin-top:52px}
+.phones img{width:100%;border-radius:22px}
+@media(max-width:1000px){.phones{grid-auto-flow:column;grid-template-columns:none;grid-auto-columns:min(62vw,250px);overflow-x:auto;scroll-snap-type:x mandatory;padding-bottom:14px;margin-right:-24px;padding-right:24px}.phones img{scroll-snap-align:start}}
+
+/* comparatif */
+.cmp-wrap{overflow-x:auto;margin-top:44px;border:1px solid var(--line);border-radius:18px}
+.cmp{width:100%;border-collapse:collapse;min-width:680px;font-size:.95rem}
+.cmp th,.cmp td{padding:16px 20px;text-align:left;border-bottom:1px solid var(--line);vertical-align:middle}
+.cmp tr:last-child td{border-bottom:0}
+.cmp thead th{font:700 .95rem/1.2 Sora,sans-serif;color:var(--ink);background:var(--bg)}
+.cmp td:first-child{font-weight:600;color:var(--ink);width:34%}
+.cmp .tf{background:var(--o-l);color:var(--ink);font-weight:600}
+.cmp thead .tf{color:var(--o)}
+.cmp .no{color:#A0A6B2}
+
+/* rappel */
+.call{display:grid;grid-template-columns:1fr 1fr;gap:48px;align-items:center;background:var(--bg);border-radius:24px;padding:48px}
+.call form{background:#fff;border-radius:18px;padding:28px;box-shadow:var(--sh);display:grid;gap:14px}
+.call label{font:600 .84rem/1 Inter,sans-serif;color:var(--ink);display:grid;gap:8px}
+.call input{font:400 1rem/1 Inter,sans-serif;padding:14px;border:1px solid #D5D8DF;border-radius:10px;width:100%;color:var(--ink)}
+.call input:focus{outline:2px solid var(--o);outline-offset:1px;border-color:var(--o)}
+.call .hp{position:absolute;left:-9999px}
+.call .msg{font-size:.9rem;min-height:1.4em}
+.call .msg.ok{color:#067647}.call .msg.ko{color:#B42318}
+@media(max-width:860px){.call{grid-template-columns:1fr;padding:28px 22px;gap:24px}}
+.alt{display:block;margin-top:16px;font-size:.95rem;text-decoration:underline;text-underline-offset:3px;color:#fff}
+
+/* fondateur */
+.founder{background:var(--o-l);border-radius:24px;padding:48px;display:grid;grid-template-columns:auto 1fr;gap:36px;align-items:center}
+.founder .mark{width:84px;height:84px;border-radius:22px;background:var(--o);display:grid;place-items:center;color:#fff}
+.founder .mark svg{width:40px;height:40px}
+.founder p{margin-top:12px;max-width:760px;color:var(--ink2)}
+@media(max-width:700px){.founder{grid-template-columns:1fr;padding:32px 24px}}
+
+/* prix */
+.toggle{display:inline-flex;background:var(--bg);border-radius:12px;padding:4px;margin-top:28px}
+.toggle button{font:600 .92rem/1 Inter,sans-serif;border:0;background:none;padding:11px 18px;border-radius:9px;cursor:pointer;color:var(--mut)}
+.toggle button[aria-pressed=true]{background:#fff;color:var(--ink);box-shadow:0 1px 3px rgba(16,18,22,.12)}
+.toggle small{color:var(--o);font-weight:600}
+.plans{display:grid;grid-template-columns:repeat(3,1fr);gap:20px;margin-top:36px;align-items:stretch}
+.plan{border:1px solid var(--line);border-radius:20px;padding:30px;display:flex;flex-direction:column;background:#fff;position:relative}
+.plan.best{border:2px solid var(--o);box-shadow:0 30px 60px -30px rgba(255,90,31,.45)}
+.tag{position:absolute;top:-13px;left:28px;background:var(--o);color:#fff;font:600 .72rem/1 Inter,sans-serif;letter-spacing:.06em;text-transform:uppercase;padding:7px 10px;border-radius:999px}
+.plan h3{font-size:1.15rem}
+.plan .who{font-size:.9rem;color:var(--mut);margin-top:6px;min-height:2.9em}
+.price{font:800 2.7rem/1 Sora,sans-serif;color:var(--ink);margin-top:16px;letter-spacing:-.03em}
+.price small{font:500 .86rem/1.3 Inter,sans-serif;color:var(--mut);letter-spacing:0;display:block;margin-top:8px;min-height:2.6em}
+.plan ul{list-style:none;margin:20px 0 28px;display:grid;gap:11px;font-size:.94rem;color:var(--ink)}
+.plan li{display:flex;gap:10px}
+.plan li svg{flex:none;width:17px;height:17px;color:var(--ok);margin-top:4px}
+.plan .btn{margin-top:auto}
+.opts{margin-top:28px;border:1px dashed #CDD1DA;border-radius:18px;padding:26px 28px;overflow-x:auto}
+.opts table{width:100%;border-collapse:collapse;font-size:.94rem;margin-top:14px;min-width:460px}
+.opts th{font:600 .72rem/1.3 Inter,sans-serif;letter-spacing:.08em;text-transform:uppercase;color:var(--mut);text-align:right;padding:8px 0}
+.opts th:first-child,.opts td:first-child{text-align:left}
+.opts td{padding:12px 0;border-top:1px solid var(--line);text-align:right;color:var(--ink);font-weight:600}
+.opts td:first-child{font-weight:500}
+.fine{font-size:.86rem;color:var(--mut);margin-top:20px;text-align:center}
+@media(max-width:900px){.plans{grid-template-columns:1fr}.plan .who,.price small{min-height:0}}
+
+/* faq */
+.faq{max-width:780px;margin:40px auto 0}
+details{border-bottom:1px solid var(--line)}
+summary{list-style:none;cursor:pointer;display:flex;justify-content:space-between;gap:20px;align-items:center;padding:22px 0;font:600 1.05rem/1.35 Inter,sans-serif;color:var(--ink)}
+summary::-webkit-details-marker{display:none}
+summary::after{content:"+";font:500 1.5rem/1 Inter,sans-serif;color:var(--o);flex:none}
+details[open] summary::after{content:"–"}
+details p{padding:0 0 22px;max-width:660px}
+
+/* final */
+.final{background:var(--o);color:#fff;text-align:center;padding:88px 0}
+.final h2{color:#fff}
+.final p{margin-top:14px;font-size:1.1rem;opacity:.95}
+.final .btn{background:#fff;color:var(--ink);margin-top:30px}
+.final .btn:hover{transform:translateY(-1px)}
+footer{background:var(--ink);color:#9CA3AF;padding:72px 0 28px;font-size:.92rem}
+.fgrid{display:grid;grid-template-columns:1.7fr 1fr 1fr 1fr;gap:48px}
+.fbrand img{height:42px;width:auto}
+.fbrand p{margin:18px 0 22px;max-width:330px;line-height:1.6}
+.fbrand .btn{padding:13px 20px;font-size:.92rem;width:auto}
+footer h4{font:600 .74rem/1 Inter,sans-serif;letter-spacing:.12em;text-transform:uppercase;color:#fff;margin-bottom:18px}
+footer nav{display:flex;flex-direction:column;gap:12px}
+footer nav a{color:#B6BBC6;transition:color .15s}
+footer nav a:hover{color:var(--o)}
+.fbot{display:flex;justify-content:space-between;align-items:center;gap:14px;flex-wrap:wrap;margin-top:56px;padding-top:24px;border-top:1px solid #262A33;font-size:.84rem}
+.fpill{display:inline-flex;align-items:center;gap:8px;border:1px solid #262A33;border-radius:999px;padding:7px 12px;color:#B6BBC6}
+.fpill i{width:7px;height:7px;border-radius:50%;background:var(--ok);display:block}
+@media(max-width:900px){.fgrid{grid-template-columns:1fr 1fr;gap:36px 24px}.fbrand{grid-column:1/-1}}
+
+.mcta{position:fixed;left:0;right:0;bottom:0;z-index:60;display:none;gap:10px;padding:10px 14px calc(10px + env(safe-area-inset-bottom));background:rgba(255,255,255,.97);border-top:1px solid var(--line);box-shadow:0 -8px 24px -12px rgba(16,18,22,.25);transform:translateY(110%);transition:transform .25s}
+.mcta.on{transform:none}
+.mcta .btn{flex:1;width:auto;padding:14px 10px;font-size:.95rem}
+@media(max-width:700px){.mcta{display:flex}body{padding-bottom:76px}}
+@media(prefers-reduced-motion:reduce){.mcta{transition:none}}
+/* ---------- bulle "Une question ?" ---------- */
+.chat{--c:#2563EB;--c-d:#1D4ED8;position:fixed;right:20px;bottom:20px;z-index:70;font-family:Inter,sans-serif}
+.chat-pill{display:flex;align-items:center;gap:14px;background:var(--c);color:#fff;border:0;border-radius:999px;padding:9px 24px 9px 9px;cursor:pointer;text-align:left;box-shadow:0 14px 34px -10px rgba(37,99,235,.6),0 0 0 3px rgba(255,255,255,.14);transition:transform .2s,box-shadow .2s,background .2s}
+.chat-pill:hover{transform:translateY(-3px);background:var(--c-d);box-shadow:0 20px 40px -12px rgba(37,99,235,.7),0 0 0 3px rgba(255,255,255,.14)}
+.js .chat-pill{animation:fadeUp .6s cubic-bezier(.2,.7,.2,1) 1.6s both}
+.chat .av{position:relative;flex:none;width:46px;height:46px;border-radius:50%;background:#fff;color:var(--c);font:700 1.05rem/46px Sora,sans-serif;text-align:center}
+.chat .av i{position:absolute;right:-1px;bottom:-1px;width:13px;height:13px;border-radius:50%;background:#22C55E;border:2.5px solid var(--c)}
+.chat-pill b{display:block;font:700 .95rem/1.25 Inter,sans-serif}
+.chat-pill small{display:block;font-size:.8rem;color:#DBE6FF;margin-top:2px}
+.chat-box{position:absolute;right:0;bottom:calc(100% + 12px);width:350px;max-width:calc(100vw - 24px);background:#fff;border-radius:18px;box-shadow:0 30px 70px -20px rgba(16,18,22,.5),0 0 0 1px var(--line);overflow:hidden;transform-origin:100% 100%;animation:chatIn .25s cubic-bezier(.2,.9,.3,1.2) both}
+.chat-box[hidden]{display:none}
+@keyframes chatIn{from{opacity:0;transform:translateY(12px) scale(.94)}to{opacity:1;transform:none}}
+.chat-h{display:flex;align-items:center;gap:12px;background:var(--c);color:#fff;padding:14px 16px}
+.chat-h .av i{border-color:var(--c)}
+.chat-h b{display:block;font-size:.95rem}
+.chat-h small{display:block;font-size:.78rem;color:#DBE6FF}
+.chat-x{margin-left:auto;background:rgba(255,255,255,.1);border:0;color:#fff;width:32px;height:32px;border-radius:50%;cursor:pointer;font-size:1.1rem;line-height:1}
+.chat-x:hover{background:rgba(255,255,255,.2)}
+.chat-b{padding:16px;display:grid;gap:10px}
+.chat-b p.say{background:var(--bg);border-radius:4px 14px 14px 14px;padding:12px 14px;font-size:.92rem;color:var(--ink);line-height:1.45}
+.chat-b input,.chat-b textarea{font:400 .95rem/1.4 Inter,sans-serif;padding:12px;border:1px solid #D5D8DF;border-radius:10px;width:100%;color:var(--ink);resize:none}
+.chat-b input:focus,.chat-b textarea:focus{outline:2px solid var(--o);outline-offset:1px;border-color:var(--o)}
+.chat-b .hp{position:absolute;left:-9999px}
+.chat-b .btn{width:100%;padding:13px;background:var(--c);box-shadow:none}
+.chat-b .btn:hover{background:var(--c-d)}
+.chat-b input:focus,.chat-b textarea:focus{outline-color:var(--c);border-color:var(--c)}
+.chat-b .msg{font-size:.86rem;min-height:1.2em}
+.chat-b .msg.ok{color:#067647}.chat-b .msg.ko{color:#B42318}
+.chat-b a.more{font-size:.84rem;color:var(--mut);text-decoration:underline;text-underline-offset:3px;text-align:center}
+@media(max-width:700px){.chat{display:none}}
+@media(prefers-reduced-motion:reduce){.js .chat-pill,.chat-box{animation:none}}
+
+.pref{border:0;display:grid;grid-template-columns:1fr 1fr;gap:10px}
+.pref legend{font:600 .84rem/1 Inter,sans-serif;color:var(--ink);margin-bottom:8px;grid-column:1/-1}
+.pref label{display:block;cursor:pointer}
+.pref input{position:absolute;opacity:0;width:1px;height:1px;padding:0}
+.pref span{display:flex;align-items:center;justify-content:center;gap:8px;padding:12px;border:1px solid #D5D8DF;border-radius:10px;font:600 .92rem/1 Inter,sans-serif;color:var(--txt);transition:all .15s}
+.pref svg{width:18px;height:18px;color:#1FAF5A}
+.pref input:checked+span{border-color:var(--o);background:var(--o-l);color:var(--ink);box-shadow:0 0 0 1px var(--o)}
+.pref input:focus-visible+span{outline:2px solid var(--o);outline-offset:2px}
+.btn.wa{background:#1FAF5A;color:#fff;width:100%}
+.btn.wa:hover{background:#178F49}
+.btn.wa[hidden]{display:none}
+.rgpd{font-size:.78rem;color:var(--mut);line-height:1.4}
+.rgpd a{text-decoration:underline;text-underline-offset:2px}
+.row li b{font-weight:600}
+
+.card.ba{padding:26px;display:flex;flex-direction:column}
+.card.ba .ic{margin-bottom:20px}
+.card.ba p{margin:0;font-size:1rem;line-height:1.45}
+.card.ba p span{display:block;font:700 .66rem/1 Inter,sans-serif;letter-spacing:.1em;text-transform:uppercase;margin-bottom:8px}
+.card.ba .av{color:var(--mut);padding-bottom:18px;border-bottom:1px dashed #D9D2C9}
+.card.ba .av s{text-decoration-color:rgba(107,114,128,.5)}
+.card.ba .av span{color:#A0A6B2}
+.card.ba .ap{color:var(--ink);font-weight:600;font-size:1.08rem;padding-top:18px}
+.card.ba .ap span{color:var(--o)}
+/* ---------- encaissement par type ---------- */
+.pays{display:grid;grid-template-columns:repeat(4,1fr);gap:18px;margin-top:48px}
+.pay{border:1px solid var(--line);border-radius:20px;padding:26px;background:#fff;display:flex;flex-direction:column;transition:transform .3s cubic-bezier(.2,.7,.2,1),box-shadow .3s}
+@media(hover:hover){.pay:hover{transform:translateY(-6px);box-shadow:var(--sh)}}
+.pay .tg{align-self:flex-start;font:700 .66rem/1 Inter,sans-serif;letter-spacing:.06em;text-transform:uppercase;padding:7px 10px;border-radius:7px;border:1px solid}
+.pay .tg.p{background:#FDF2FA;color:#C11574;border-color:#FCCEEE}
+.pay .tg.d{background:#F2F4F7;color:#344054;border-color:#D0D5DD}
+.pay .tg.c{background:#FFFAEB;color:#B54708;border-color:#FEDF89}
+.pay .tg.g{background:#F4EBFF;color:#6941C6;border-color:#D9C6FB}
+.pay .pi{width:52px;height:52px;border-radius:14px;display:grid;place-items:center;margin:22px 0 16px}
+.pay .pi svg{width:26px;height:26px}
+.pay .pi.o{background:var(--o-l);color:var(--o)}.pay .pi.k{background:#EEF0F4;color:var(--ink)}.pay .pi.v{background:#DCFAE6;color:#067647}
+.pay h3{font-size:1.15rem}
+.pay p{font-size:.94rem;margin-top:8px}
+.pay .how{display:flex;flex-wrap:wrap;gap:6px;margin-top:auto;padding-top:18px}
+.pay .how span{font:600 .76rem/1 Inter,sans-serif;background:var(--bg);color:var(--ink);padding:7px 10px;border-radius:999px}
+.pay .how span.z{background:#DCFAE6;color:#067647}
+.paynote{margin-top:22px;font-size:.9rem;color:var(--mut);display:flex;align-items:center;gap:8px}
+.paynote svg{width:17px;height:17px;color:var(--ok);flex:none}
+@media(max-width:1000px){.pays{grid-template-columns:1fr 1fr}}
+@media(max-width:560px){.pays{grid-template-columns:1fr}}
+
+/* ---------- facturation électronique ---------- */
+.efact{background:var(--ink);color:#C5C9D2;border-radius:24px;padding:48px;display:grid;grid-template-columns:1fr 1fr;gap:48px;align-items:center}
+.efact h2{color:#fff;font-size:clamp(1.5rem,3vw,2.1rem)}
+.efact p{margin-top:14px}
+.efact .ok{display:inline-flex;align-items:center;gap:8px;margin-top:22px;background:rgba(18,183,106,.16);color:#6CE9A6;font:600 .86rem/1 Inter,sans-serif;padding:10px 14px;border-radius:999px}
+.efact .ok svg{width:16px;height:16px}
+.dates{list-style:none;position:relative;display:grid;gap:14px}
+.dates::before{content:"";position:absolute;left:19px;top:26px;bottom:26px;width:2px;background:#2B2F39}
+.dates li{position:relative;display:flex;gap:18px;align-items:flex-start;background:#1A1D24;border:1px solid #262A33;border-radius:16px;padding:20px}
+.dates .dt{flex:none;width:40px;height:40px;border-radius:50%;display:grid;place-items:center;background:#262A33;color:#fff;position:relative;z-index:1}
+.dates .dt svg{width:18px;height:18px}
+.dates li.done .dt{background:var(--ok)}
+.dates li.next .dt{background:var(--o)}
+.dates b{display:block;color:#fff;font:700 1.05rem/1.2 Sora,sans-serif}
+.dates span{display:block;font-size:.92rem;margin-top:5px}
+.dates em{display:inline-block;white-space:nowrap;font:600 .68rem/1 Inter,sans-serif;letter-spacing:.06em;text-transform:uppercase;padding:5px 8px;border-radius:999px;margin-left:8px;vertical-align:middle}
+@media(max-width:560px){.dates em{display:table;margin:8px 0 0}}
+.dates li.done em{background:rgba(18,183,106,.16);color:#6CE9A6}
+.dates li.next em{background:rgba(255,90,31,.18);color:#FF9466}
+@media(max-width:860px){.efact{grid-template-columns:1fr;padding:30px 22px;gap:28px}}
+
+/* ---------- signature électronique ---------- */
+.sign{display:grid;grid-template-columns:1fr 1fr;gap:64px;align-items:center}
+.sign ul{list-style:none;margin-top:26px;display:grid;gap:18px}
+.sign li{display:flex;gap:14px}
+.sign li .n{flex:none;width:40px;height:40px;border-radius:12px;background:var(--o-l);color:var(--o);display:grid;place-items:center}
+.sign li .n svg{width:20px;height:20px}
+.sign li b{display:block;color:var(--ink);font-size:1rem}
+.sign li span{font-size:.95rem}
+.signs{position:relative;height:490px}
+.doc{position:absolute;width:74%;background:#fff;border:1px solid var(--line);border-radius:18px;padding:24px;box-shadow:0 2px 4px rgba(16,18,22,.04),0 30px 60px -28px rgba(16,18,22,.35);transition:transform .4s cubic-bezier(.2,.7,.2,1)}
+.doc.d1{left:0;top:0;transform:rotate(-3deg)}
+.doc.d2{right:0;bottom:0;transform:rotate(2.5deg)}
+@media(hover:hover){.signs:hover .doc.d1{transform:rotate(-5deg) translate(-6px,-6px)}.signs:hover .doc.d2{transform:rotate(4deg) translate(6px,6px)}}
+.doc-h{display:flex;justify-content:space-between;align-items:center;gap:10px}
+.doc-h b{font:700 1rem/1.2 Sora,sans-serif;color:var(--ink)}
+.doc-h small{display:block;font:500 .78rem/1.3 Inter,sans-serif;color:var(--mut);margin-top:3px}
+.doc .st{font:700 .66rem/1 Inter,sans-serif;letter-spacing:.06em;text-transform:uppercase;padding:7px 10px;border-radius:999px;background:#DCFAE6;color:#067647;white-space:nowrap}
+.doc .ln{height:8px;border-radius:4px;background:#EEF0F4;margin-top:12px}
+.doc .ln.s{width:62%}.doc .ln.m{width:84%}
+.doc .box{margin-top:18px;border:1.5px dashed #D5D8DF;border-radius:12px;padding:6px 14px 2px;position:relative}
+.doc .box i{position:absolute;left:14px;top:8px;font:600 .62rem/1 Inter,sans-serif;font-style:normal;letter-spacing:.08em;text-transform:uppercase;color:#A0A6B2}
+.doc .box svg{display:block;width:100%;height:74px}
+.doc .box path{fill:none;stroke:#1F3A8A;stroke-width:2.6;stroke-linecap:round;stroke-linejoin:round;stroke-dasharray:1;stroke-dashoffset:0}
+.js .signs .box path{stroke-dashoffset:1}
+.js .signs.go .box path{stroke-dashoffset:0;transition:stroke-dashoffset 1.8s cubic-bezier(.5,0,.2,1) .35s}
+.js .signs.go .d2 .box path{transition-delay:1.3s}
+.js .signs .st{opacity:0;transform:scale(.7);transition:opacity .3s,transform .4s cubic-bezier(.2,1.6,.4,1)}
+.js .signs.go .st{opacity:1;transform:none;transition-delay:2s}
+.js .signs.go .d2 .st{transition-delay:3s}
+@media(max-width:900px){.sign{grid-template-columns:1fr;gap:36px}.signs{height:450px;max-width:460px;width:100%;margin:0 auto}}
+@media(max-width:480px){.signs{height:420px}.doc{width:86%;padding:18px}}
+@media(prefers-reduced-motion:reduce){.js .signs .box path{stroke-dashoffset:0;transition:none}.js .signs .st{opacity:1;transform:none;transition:none}}
+
+/* ---------- animations ---------- */
+.js .rv{opacity:0;transform:translateY(26px);transition:opacity .7s cubic-bezier(.2,.7,.2,1),transform .7s cubic-bezier(.2,.7,.2,1);will-change:opacity,transform}
+.js .rv.rv-l{transform:translateX(-44px)}
+.js .rv.rv-r{transform:translateX(44px)}
+.js .rv.rv-z{transform:translateY(34px) scale(.94)}
+@media(max-width:900px){.js .rv.rv-l,.js .rv.rv-r{transform:translateY(26px)}}
+main{overflow-x:clip}
+.js .rv.in{opacity:1;transform:none}
+@keyframes fadeUp{from{opacity:0;translate:0 22px}to{opacity:1;translate:0 0}}
+@keyframes frameIn{from{opacity:0;translate:0 60px}to{opacity:1;translate:0 0}}
+@keyframes glow{0%,100%{opacity:.75;transform:scale(1)}50%{opacity:1;transform:scale(1.08)}}
+@keyframes pulse{0%{box-shadow:0 0 0 0 rgba(18,183,106,.55)}70%{box-shadow:0 0 0 9px rgba(18,183,106,0)}100%{box-shadow:0 0 0 0 rgba(18,183,106,0)}}
+@keyframes bump{0%{transform:scale(1)}40%{transform:scale(1.06)}100%{transform:scale(1)}}
+@keyframes shine{from{transform:translateX(-120%) skewX(-20deg)}to{transform:translateX(320%) skewX(-20deg)}}
+.js .hero .eyebrow,.js .hero .sub,.js .hero .cta,.js .hero .ticks{animation:fadeUp .8s cubic-bezier(.2,.7,.2,1) both}
+.js .hero .sub{animation-delay:.55s}.js .hero .cta{animation-delay:.7s}.js .hero .ticks{animation-delay:.85s}
+.js .hero .frame{animation:frameIn 1.1s cubic-bezier(.2,.7,.2,1) .9s both;transform-origin:50% 0;will-change:transform}
+.hero{position:relative;overflow-x:clip}
+.hero::before{content:"";position:absolute;left:50%;top:-180px;width:900px;height:520px;margin-left:-450px;background:radial-gradient(closest-side,rgba(255,90,31,.18),rgba(255,90,31,0));pointer-events:none}
+.hero .w{position:relative}
+.btn svg{transition:transform .2s}
+.btn:hover svg{transform:translateX(4px)}
+.btn-o{position:relative;overflow:hidden}
+.btn-o::after{content:"";position:absolute;top:0;bottom:0;left:0;width:34%;background:linear-gradient(90deg,rgba(255,255,255,0),rgba(255,255,255,.35),rgba(255,255,255,0));transform:translateX(-120%) skewX(-20deg);pointer-events:none}
+.btn-o:hover::after{animation:shine .8s ease}
+.nav nav a:not(.btn){position:relative}
+.nav nav a:not(.btn)::after{content:"";position:absolute;left:0;right:0;bottom:-6px;height:2px;background:var(--o);transform:scaleX(0);transform-origin:left;transition:transform .25s}
+.nav nav a:not(.btn):hover::after{transform:scaleX(1)}
+.card,.mod,.plan,.shot,.phones img,.panel{transition:transform .3s cubic-bezier(.2,.7,.2,1),box-shadow .3s,border-color .3s}
+@media(hover:hover){
+  .card:hover,.mod:hover{transform:translateY(-5px);box-shadow:var(--sh)}
+  .mod:hover{border-color:var(--o)}
+  .plan:hover{transform:translateY(-6px)}
+  .shot:hover{transform:translateY(-6px) scale(1.01);box-shadow:0 2px 4px rgba(16,18,22,.05),0 30px 60px -24px rgba(16,18,22,.3)}
+}
+.ic{transition:transform .3s,background .3s,color .3s}
+.card:hover .ic{background:var(--o);color:#fff}
+.res .big.bump,.res .eur.bump{animation:bump .35s ease}
+details[open] p{animation:fadeUp .35s ease both}
+summary{transition:color .2s}
+summary:hover{color:var(--o)}
+.tl .dot{transition:transform .4s cubic-bezier(.2,1.6,.4,1) .15s}
+.js .tl li.rv .dot{transform:scale(.4)}
+.js .tl li.rv.in .dot{transform:none}
+
+/* ---------- animations v2 ---------- */
+.prog{position:fixed;left:0;top:0;height:3px;width:100%;background:var(--o);transform:scaleX(0);transform-origin:0 50%;z-index:80;pointer-events:none}
+.wd{display:inline-block;overflow:hidden;vertical-align:top;padding:.1em 0 .14em;margin:-.1em 0 -.14em}
+.wd>span{display:inline-block}
+@keyframes wordUp{from{transform:translateY(120%) rotate(4deg)}to{transform:none}}
+.js .wd>span{animation:wordUp .95s cubic-bezier(.2,.8,.2,1) both;animation-delay:calc(var(--i)*95ms + 80ms)}
+.roll{display:inline-block;height:1.12em;line-height:1.12em;overflow:hidden;vertical-align:top}
+.roll .strip{display:block;transform:translateY(-80%)}
+.roll i{display:block;height:1.12em;font-style:normal}
+@keyframes roll{from{transform:translateY(0)}to{transform:translateY(-80%)}}
+.js .roll .strip{animation:roll 1.7s cubic-bezier(.65,0,.15,1) .95s both}
+
+.stagecol,.rail{display:none}
+@media(min-width:960px){
+  .tour .tourgrid{display:grid;grid-template-columns:minmax(0,5fr) minmax(0,7fr);gap:72px;margin-top:24px}
+  .tour .tourcol{position:relative;padding-left:40px}
+  .tour .tourcol::before{content:"";position:absolute;left:6px;top:12vh;bottom:12vh;width:2px;background:#DDE0E7;border-radius:2px}
+  .tour .rail{display:block;position:absolute;left:6px;top:12vh;width:2px;height:calc(var(--p,0)*(100% - 24vh));background:var(--o);border-radius:2px}
+  .tour .row{display:flex;align-items:center;min-height:72vh;margin:0;position:relative;opacity:.25;transition:opacity .45s}
+  .tour .row.on{opacity:1}
+  .tour .row::before{content:"";position:absolute;left:-40px;top:50%;width:14px;height:14px;margin-top:-7px;border-radius:50%;background:var(--bg);border:2px solid #C9CDD6;transition:all .35s;z-index:1}
+  .tour .row.on::before{background:var(--o);border-color:var(--o);box-shadow:0 0 0 7px rgba(255,90,31,.18);transform:scale(1.15)}
+  .tour .row figure{display:none}
+  .tour .row .txt{transition:transform .5s cubic-bezier(.2,.7,.2,1)}
+  .tour .row:not(.on) .txt{transform:translateX(-10px)}
+  .tour .stagecol{display:block}
+  .stage{position:sticky;top:calc(50vh - 225px);aspect-ratio:1193/840;border-radius:18px;background:#fff;border:1px solid var(--line);box-shadow:0 2px 4px rgba(16,18,22,.04),0 50px 90px -40px rgba(16,18,22,.45);overflow:hidden}
+  .stage img{position:absolute;inset:0;width:100%;height:100%;object-fit:contain;opacity:0;transform:translateY(34px) scale(.965);transition:opacity .45s ease,transform .7s cubic-bezier(.2,.7,.2,1)}
+  .stage img.on{opacity:1;transform:none}
+  .stage img.was{transform:translateY(-34px) scale(.965)}
+  .stage-tag{position:absolute;left:16px;bottom:16px;z-index:2;background:var(--ink);color:#fff;font:600 .78rem/1 Inter,sans-serif;padding:9px 13px;border-radius:999px;box-shadow:0 8px 20px -8px rgba(16,18,22,.5)}
+  .stage-n{position:absolute;right:16px;bottom:16px;z-index:2;background:rgba(255,255,255,.92);color:var(--ink);font:600 .78rem/1 Inter,sans-serif;padding:9px 12px;border-radius:999px;border:1px solid var(--line)}
+}
+.tl{position:relative}
+.tl .dot{position:relative;z-index:1}
+.tl::before{content:"";position:absolute;left:18px;top:34px;bottom:40px;width:2px;background:var(--line);transform-origin:50% 0}
+.js .tl::before{transform:scaleY(0);transition:transform 1.3s cubic-bezier(.4,0,.2,1) .25s}
+.js .tl.go::before{transform:scaleY(1)}
+@media(prefers-reduced-motion:reduce){
+  .js .wd>span,.js .roll .strip{animation:none}
+  .js .tl::before{transform:none;transition:none}
+  .stage img,.tour .row,.tour .row .txt{transition:none}
+}
+
+/* ---------- animations v3 ---------- */
+.w2{display:inline-block;overflow:hidden;vertical-align:top;padding:.1em 0 .18em;margin:-.1em 0 -.18em}
+.w2>span{display:inline-block}
+.js .spl .w2>span{transform:translateY(120%) rotate(5deg);transition:transform .85s cubic-bezier(.2,.8,.2,1);transition-delay:calc(var(--i)*40ms)}
+.js .spl.seen .w2>span{transform:none}
+@keyframes ring{0%{box-shadow:0 10px 24px -10px rgba(255,90,31,.7),0 0 0 0 rgba(255,90,31,.55)}60%,100%{box-shadow:0 10px 24px -10px rgba(255,90,31,.7),0 0 0 18px rgba(255,90,31,0)}}
+.js .hero .cta .btn-o{animation:ring 2.6s ease-out 2.6s 3}
+@keyframes sheen{to{transform:translateX(110%)}}
+.hero .frame::after{content:"";position:absolute;inset:0;background:linear-gradient(105deg,rgba(255,255,255,0) 38%,rgba(255,255,255,.6) 50%,rgba(255,255,255,0) 62%);transform:translateX(-110%);pointer-events:none}
+.js .hero .frame::after{animation:sheen 1.5s ease 2.3s both}
+.js .hero::before{animation:glow 7s ease-in-out infinite}
+.js .ba s{text-decoration:none;background:linear-gradient(currentColor,currentColor) 0 56%/0 1.5px no-repeat;transition:background-size .8s ease .55s}
+.js .ba.seen s{background-size:100% 1.5px}
+.js .ba .ap{opacity:0;transform:translateY(14px);transition:opacity .5s ease 1.25s,transform .6s cubic-bezier(.2,.8,.2,1) 1.25s}
+.js .ba.seen .ap{opacity:1;transform:none}
+.js .pay .pi{transform:scale(0) rotate(-25deg);transition:transform .65s cubic-bezier(.2,1.7,.4,1) .3s}
+.js .pay.seen .pi{transform:none}
+.js .pay .how span{opacity:0;transform:translateY(10px);transition:opacity .4s ease,transform .45s cubic-bezier(.2,.8,.2,1)}
+.js .pay.seen .how span{opacity:1;transform:none}
+.js .pay.seen .how span:nth-child(1){transition-delay:.65s}.js .pay.seen .how span:nth-child(2){transition-delay:.78s}.js .pay.seen .how span:nth-child(3){transition-delay:.91s}
+.cmp tbody .tf{position:relative;padding-left:52px}
+.cmp tbody .tf::before{content:"";position:absolute;left:20px;top:50%;width:20px;height:20px;margin-top:-10px;border-radius:50%;background:var(--ok) url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='white' stroke-width='3.4' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M19 7 10 16l-5-5'/%3E%3C/svg%3E") center/13px no-repeat}
+.js .cmp tbody tr .tf::before{transform:scale(0);transition:transform .5s cubic-bezier(.2,1.7,.4,1) .35s}
+.js .cmp tbody tr.seen .tf::before{transform:none}
+.js .efact .dates::before{transform:scaleY(0);transform-origin:50% 0;transition:transform 1s ease .5s}
+.js .efact.seen .dates::before{transform:none}
+.js .dates li .dt{transform:scale(0);transition:transform .6s cubic-bezier(.2,1.7,.4,1) .45s}
+.js .dates li.seen .dt{transform:none}
+.clock{width:92px;height:92px;display:block;margin:0 auto 26px}
+.clock circle,.clock path,.clock line{fill:none;stroke:#fff;stroke-width:5;stroke-linecap:round}
+.clock .pin{fill:#fff;stroke:none}
+.clock path{stroke-width:4;opacity:.7}
+.clock .hh,.clock .mh{transform-box:view-box;transform-origin:50px 50px}
+.clock .hh{stroke-width:6;transform:rotate(180deg)}
+.clock .mh{transform:rotate(0deg)}
+.js .clock .hh{transform:rotate(300deg);transition:transform 2.6s cubic-bezier(.5,0,.15,1) .35s}
+.js .clock .mh{transform:rotate(1440deg);transition:transform 2.6s cubic-bezier(.5,0,.15,1) .35s}
+.js .clock.seen .hh{transform:rotate(180deg)}
+.js .clock.seen .mh{transform:rotate(0deg)}
+@keyframes bob2{0%,100%{translate:0 0}50%{translate:0 -12px}}
+.phones.float img{animation:bob2 6s ease-in-out infinite}
+.phones.float img:nth-child(even){animation-delay:-3s}
+.app{position:relative;overflow:hidden}
+.app .w{position:relative}
+@keyframes drift{0%,100%{transform:translate(0,0)}50%{transform:translate(22%,14%)}}
+.app::before{content:"";position:absolute;left:-10%;top:-30%;width:60%;height:90%;background:radial-gradient(closest-side,rgba(255,90,31,.24),rgba(255,90,31,0));animation:drift 15s ease-in-out infinite;pointer-events:none}
+@keyframes grad{0%,100%{background-position:0% 50%}50%{background-position:100% 50%}}
+.final{background:linear-gradient(115deg,#FF5A1F,#FF8A4C,#EE4408,#FF5A1F);background-size:300% 300%;animation:grad 11s ease infinite}
+.mod,.plan,.card,.pay{--mx:-500px;--my:-500px;background-image:radial-gradient(280px circle at var(--mx) var(--my),rgba(255,90,31,.14),rgba(255,90,31,0) 65%)}
+@media(prefers-reduced-motion:reduce){
+  .js .spl .w2>span,.js .pay .pi,.js .pay .how span,.js .cmp tbody tr .tf::before,.js .dates li .dt,.js .efact .dates::before{transform:none;opacity:1;transition:none}
+  .js .hero .cta .btn-o,.js .hero .frame::after,.js .hero::before,.phones.float img,.app::before,.final{animation:none}
+  .js .ba s{background-size:100% 1.5px;transition:none}.js .ba .ap{opacity:1;transform:none;transition:none}
+  .js .clock .hh{transform:rotate(180deg);transition:none}.js .clock .mh{transform:rotate(0deg);transition:none}
+}
+@media(prefers-reduced-motion:reduce){
+  .js .rv,.js .rv.rv-l,.js .rv.rv-r,.js .rv.rv-z{opacity:1;transform:none;transition:none}
+  .js .hero .eyebrow,.js .hero h1,.js .hero .sub,.js .hero .cta,.js .hero .ticks,.js .hero .frame,.btn-o:hover::after,details[open] p{animation:none}
+  .js .tl li.rv .dot{transform:none}
+  html{scroll-behavior:auto}
+}
+@media(max-width:600px){.sec{padding:68px 0}.hero{padding-top:44px}.hero-shot{margin:44px auto -60px}.after-hero{padding-top:108px}.frame .bar{height:24px}.frame .bar span{display:none}.btn{width:100%}.nav .btn{width:auto}}
+</style>
+</head>
+<body>
+
+<div class="prog" id="prog"></div>
+<header id="top">
+  <div class="w nav">
+    <a class="logo" href="#top" aria-label="TigerFlow">
+      <img src="tf-logo.svg" alt="TigerFlow" width="172" height="38">
+    </a>
+    <nav>
+      <a href="#produit">Le logiciel</a>
+      <a href="#appli">L'appli</a>
+      <a href="#prix">Prix</a>
+      <a href="#faq">FAQ</a>
+      <a href="https://tigerseo13-del.github.io/sastigerflow/connexion.html">Se connecter</a>
+      <a class="btn btn-k" href="https://tigerseo13-del.github.io/sastigerflow/inscription.html">Essai gratuit</a>
+    </nav>
+  </div>
+</header>
+
+<main>
+<section class="hero">
+  <div class="w">
+    <p class="eyebrow">Le logiciel des entreprises antinuisibles</p>
+    <h1 aria-label="Finissez vos journées à 18 h."><span aria-hidden="true"><span class="wd" style="--i:0"><span>Finissez</span></span> <span class="wd" style="--i:1"><span>vos</span></span> <span class="wd" style="--i:2"><span>journées</span></span> <em><span class="wd" style="--i:3"><span>à</span></span> <span class="wd" style="--i:4"><span><span class="roll"><span class="strip"><i>22</i><i>21</i><i>20</i><i>19</i><i>18</i></span></span> h.</span></span></em></span></h1>
+    <p class="sub">Planning, techniciens, devis, factures, encaissement : TigerFlow fait le travail de bureau pendant que vous êtes sur le terrain.</p>
+    <div class="cta">
+      <a class="btn btn-o" href="https://tigerseo13-del.github.io/sastigerflow/inscription.html">Je commence mon essai gratuit <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+      <a class="btn btn-w" href="#rappel">Être rappelé</a>
+    </div>
+    <ul class="ticks">
+      <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg> 14 jours gratuits</li>
+      <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg> Sans carte bancaire</li>
+      <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg> On importe vos clients pour vous</li>
+    </ul>
+    <div class="hero-shot">
+    <figure class="frame">
+        <div class="bar"><i></i><i></i><i></i><span>TigerFlow · Calendrier</span></div>
+        <img fetchpriority="high" src="tf-cal.webp" width="1449" height="840" alt="Le calendrier de TigerFlow : une colonne par technicien, les interventions de la journée classées par code postal et par nuisible">
+      </figure>
+    </div>
+  </div>
+</section>
+
+<section class="sec after-hero" id="probleme">
+  <div class="w">
+    <p class="eyebrow">Avant / après</p>
+    <h2>Vous passez vos soirées à refaire ce que vous avez déjà fait dans la journée.</h2>
+    <div class="grid3">
+      <div class="card ba"><div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 3H7a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V8z"/><path d="M14 3v5h5M9 13h6M9 17h4"/></svg></div>
+        <p class="av"><span>Avant</span><s>Le devis part le soir, quand vous y pensez.</s></p>
+        <p class="ap"><span>Avec TigerFlow</span>Fait et signé sur place, avant de repartir.</p>
+      </div>
+      <div class="card ba"><div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg></div>
+        <p class="av"><span>Avant</span><s>« C'est où ? C'est quoi le code ? » Vingt fois par jour.</s></p>
+        <p class="ap"><span>Avec TigerFlow</span>Adresse, client, consignes : tout est dans l'appli du technicien.</p>
+      </div>
+      <div class="card ba"><div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg></div>
+        <p class="av"><span>Avant</span><s>Rapports et factures à refaire le soir.</s></p>
+        <p class="ap"><span>Avec TigerFlow</span>Le rapport part tout seul, la facture se crée en un clic.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="sec prod" id="produit">
+  <div class="w">
+    <p class="eyebrow">Le logiciel, en vrai</p>
+    <h2>Ce que vous voyez ici, c'est ce que vous aurez demain matin.</h2>
+    <p class="lead">Pas de maquette : ce sont les écrans de TigerFlow, tels que vous les utiliserez au bureau.</p>
+
+    <div class="row">
+      <div class="txt">
+        <span class="step">8 h 00 · Le planning</span>
+        <h3>Chaque intervention ouvre sa fiche complète</h3>
+        <p>Un clic sur un créneau et tout est là : l'adresse, le client, le nuisible, le technicien. Vous n'avez plus à répondre au téléphone pour donner un code postal.</p>
+        <ul>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg> Appel, WhatsApp et itinéraire en un geste</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg> Statut suivi en direct : assignée, en cours, terminée</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg> Le rapport d'intervention se lance depuis la fiche</li>
+        </ul>
+      </div>
+      <figure><div class="shot narrow"><img loading="lazy" src="tf-panel.webp" width="677" height="840" alt="La fiche d'une intervention dans TigerFlow : créneau, adresse, client, technicien, boutons Appeler, WhatsApp, Itinéraire et Rapport"></div></figure>
+    </div>
+
+    <div class="row rev">
+      <div class="txt">
+        <span class="step">11 h 00 · Le devis</span>
+        <h3>Du devis à la facture, sans rien retaper</h3>
+        <p>Vous suivez chaque devis d'un coup d'œil : créé, envoyé, répondu, facturé. Une fois signé, il devient une facture en un clic, avec les mêmes lignes.</p>
+        <ul>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg> Signature électronique en ligne</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg> PDF prêt à télécharger</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg> Conversion en facture en un clic</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg> Facturation électronique incluse</li>
+        </ul>
+      </div>
+      <figure><div class="shot"><img loading="lazy" src="tf-devisd.webp" width="1193" height="840" alt="Un devis gagné dans TigerFlow, avec son cycle de vie et le bouton Convertir en facture"></div></figure>
+    </div>
+
+    <div class="row">
+      <div class="txt">
+        <span class="step">14 h 00 · L'encaissement</span>
+        <h3>Le bon encaissement selon l'intervention</h3>
+        <p>TigerFlow sait ce qu'il faut encaisser, ou non, selon le type de passage. Le technicien n'a pas à se poser la question, et vous retrouvez chaque règlement rattaché à sa facture.</p>
+        <ul>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg> <span><b>Traitement ponctuel :</b> encaissement sur place, par carte (QR code Stripe), lien de paiement ou espèces</span></li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg> <span><b>Visite sur site et devis :</b> devis signé sur place, acompte en ligne</span></li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg> <span><b>Sous contrat :</b> rien à encaisser, c'est facturé au contrat</span></li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg> <span><b>2e passage / garantie :</b> rien à payer, le rapport part quand même</span></li>
+        </ul>
+      </div>
+      <figure><div class="shot"><img loading="lazy" src="tf-paiements.webp" width="1193" height="840" alt="Les paiements dans TigerFlow : total encaissé, encaissé ce mois-ci, en attente et montant restant dû"></div></figure>
+    </div>
+
+    <div class="row rev">
+      <div class="txt">
+        <span class="step">17 h 30 · Le fichier clients</span>
+        <h3>Qui vous doit de l'argent, en une ligne par client</h3>
+        <p>Particuliers, entreprises, syndics : chiffre d'affaires, contrats en cours et reste à encaisser pour chacun. Les retards de paiement sont en rouge, vous ne les cherchez plus.</p>
+      </div>
+      <figure><div class="shot"><img loading="lazy" src="tf-clients.webp" width="1193" height="840" alt="La liste des clients dans TigerFlow : type, statut, contrats, chiffre d'affaires, reste à encaisser et statut de paiement"></div></figure>
+    </div>
+
+    <div class="row">
+      <div class="txt">
+        <span class="step">18 h 00 · Le tableau de bord</span>
+        <h3>Votre semaine sur un seul écran, puis vous rentrez</h3>
+        <p>Interventions des sept derniers jours, répartition par nuisible, taux d'acceptation des devis, taux d'interventions terminées. Vous savez où en est la société sans ouvrir un seul tableur.</p>
+      </div>
+      <figure><div class="shot"><img loading="lazy" src="tf-dash.webp" width="1193" height="840" alt="Le tableau de bord de TigerFlow : interventions sur 7 jours, répartition par catégorie de nuisible, taux d'acceptation des devis"></div></figure>
+    </div>
+  </div>
+</section>
+
+
+<section class="sec app" id="appli">
+  <div class="w">
+    <p class="eyebrow">Sur le terrain</p>
+    <h2>Et dans la poche de vos techniciens.</h2>
+    <p class="lead">L'appli du technicien, sur iPhone et Android : sa journée, la fiche du client, le devis, la signature, le paiement par carte et le rapport. Tout remonte au bureau en temps réel.</p>
+    <div class="phones">
+      <img loading="lazy" src="tf-m1.webp" width="634" height="1376" alt="Appli technicien TigerFlow : le résumé de la journée et la prochaine intervention">
+      <img loading="lazy" src="tf-m2.webp" width="634" height="1376" alt="Appli technicien TigerFlow : la fiche du client avec appel, SMS, WhatsApp et itinéraire">
+      <img loading="lazy" src="tf-m5.webp" width="634" height="1376" alt="Appli technicien TigerFlow : créer un devis sur place à partir de la bibliothèque de prestations">
+      <img loading="lazy" src="tf-m6.webp" width="634" height="1376" alt="Appli technicien TigerFlow : signature du client et choix du mode de paiement">
+      <img loading="lazy" src="tf-m3.webp" width="634" height="1376" alt="Appli technicien TigerFlow : encaissement par carte avec un QR code">
+      <img loading="lazy" src="tf-m4.webp" width="634" height="1376" alt="Appli technicien TigerFlow : le rapport d'intervention en PDF">
+    </div>
+  </div>
+</section>
+
+
+<section class="sec" id="encaissement">
+  <div class="w">
+    <p class="eyebrow">Encaissement</p>
+    <h2>À chaque type d'intervention, le bon encaissement.</h2>
+    <p class="lead">Le technicien ouvre son intervention : TigerFlow lui dit s'il doit encaisser, combien, et comment. Plus d'oubli, plus d'appel au bureau.</p>
+    <div class="pays">
+      <div class="pay">
+        <span class="tg p">Traitement ponctuel</span>
+        <div class="pi o"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="5" width="20" height="14" rx="3"/><path d="M2 10h20M6 15h4"/></svg></div>
+        <h3>Encaissé sur place</h3>
+        <p>Le client paie avant que le technicien reparte, par carte avec un QR code Stripe, par lien de paiement ou en espèces.</p>
+        <div class="how"><span>Carte</span><span>Lien de paiement</span><span>Espèces</span></div>
+      </div>
+      <div class="pay">
+        <span class="tg d">Visite sur site et devis</span>
+        <div class="pi k"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 3H7a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V8z"/><path d="M14 3v5h5M8 16c1.500-2 2.500-2 3.500 0s2 2 4-1"/></svg></div>
+        <h3>Devis signé, acompte en ligne</h3>
+        <p>Le devis se fait et se signe sur place. Le client règle son acompte par carte, et l'intervention est à planifier.</p>
+        <div class="how"><span>Signature</span><span>Acompte par carte</span></div>
+      </div>
+      <div class="pay">
+        <span class="tg c">Sous contrat</span>
+        <div class="pi v"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12a9 9 0 1 1-3-6.700"/><path d="M21 4v5h-5"/></svg></div>
+        <h3>Rien à encaisser</h3>
+        <p>Le passage est compris dans le contrat. Il est facturé à la date prévue, sans rien demander au client sur place.</p>
+        <div class="how"><span class="z">0 € sur place</span><span>Facturé au contrat</span></div>
+      </div>
+      <div class="pay">
+        <span class="tg g">2e passage / garantie</span>
+        <div class="pi v"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3l8 3v6c0 4.500-3.200 8-8 9-4.800-1-8-4.500-8-9V6z"/><path d="M9 12l2 2 4-4"/></svg></div>
+        <h3>Rien à payer</h3>
+        <p>Le passage est couvert par la garantie. Le client ne paie rien, et il reçoit quand même son rapport d'intervention.</p>
+        <div class="how"><span class="z">0 € sur place</span><span>Rapport envoyé</span></div>
+      </div>
+    </div>
+    <p class="paynote"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg> Les paiements par carte passent par Stripe et se retrouvent rattachés à leur facture dans TigerFlow.</p>
+  </div>
+</section>
+
+<section class="sec" id="signature" style="padding-top:0">
+  <div class="w">
+    <div class="sign">
+      <div>
+        <p class="eyebrow">Signature électronique</p>
+        <h2>Devis et contrats pro se signent en ligne.</h2>
+        <p class="lead">Fini le devis imprimé, signé, scanné et renvoyé. Votre client signe sur un écran, et vous le voyez tout de suite dans TigerFlow.</p>
+        <ul>
+          <li><span class="n"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 3H7a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V8z"/><path d="M14 3v5h5M9 13h6M9 17h4"/></svg></span><div><b>Les devis</b><span>Signés sur place, sur le téléphone du technicien, ou à distance depuis le lien que le client reçoit.</span></div></li>
+          <li><span class="n"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 21h18M5 21V7l7-4 7 4v14M9 21v-6h6v6M9 10h.01M15 10h.01"/></svg></span><div><b>Les contrats professionnels</b><span>Syndics, restaurants, entreprises : le contrat annuel se signe en ligne, sans impression ni courrier.</span></div></li>
+          <li><span class="n"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg></span><div><b>Le suivi</b><span>Vous savez qui a signé et qui est encore en attente de signature, sans relancer à l'aveugle.</span></div></li>
+        </ul>
+      </div>
+      <div class="signs" id="signs" aria-hidden="true">
+        <div class="doc d1">
+          <div class="doc-h"><div><b>Devis</b><small>Traitement anti-punaises de lit</small></div><span class="st">Signé</span></div>
+          <div class="ln m"></div><div class="ln"></div><div class="ln s"></div>
+          <div class="box"><i>Signature du client</i><svg viewBox="0 0 300 80" preserveAspectRatio="xMidYMid meet"><path pathLength="1" d="M28 56c14-22 26-38 34-34 9 5-16 40-8 42 9 2 20-30 30-30 8 0-4 26 4 26 9 0 14-22 24-22 7 0-2 20 6 20 10 0 16-26 30-26 12 0 4 24 16 24 14 0 22-18 40-22 16-4 34 2 58-8"/></svg></div>
+        </div>
+        <div class="doc d2">
+          <div class="doc-h"><div><b>Contrat annuel</b><small>Syndic · 4 passages par an</small></div><span class="st">Signé</span></div>
+          <div class="ln"></div><div class="ln m"></div><div class="ln s"></div>
+          <div class="box"><i>Signature du client</i><svg viewBox="0 0 300 80" preserveAspectRatio="xMidYMid meet"><path pathLength="1" d="M34 50c10-18 30-34 38-26 8 8-22 34-10 36 14 2 30-40 44-38 10 2-12 34 0 36 12 2 22-26 34-24 10 2-4 22 8 22 16 0 28-30 46-28 12 2 2 22 18 20 14-2 30-14 60-18"/></svg></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="sec" id="prix" style="background:var(--bg)">
+  <div class="w" style="text-align:center">
+    <p class="eyebrow">Prix</p>
+    <h2>Choisissez votre formule</h2>
+    <div class="toggle" role="group" aria-label="Période de facturation">
+      <button type="button" id="bm" aria-pressed="true">Mensuel</button>
+      <button type="button" id="ba" aria-pressed="false">Annuel <small>· 1 mois offert</small></button>
+    </div>
+    <div class="plans" style="text-align:left">
+      <div class="plan">
+        <h3>Gratuit</h3>
+        <p class="who">Pour démarrer seul, sans rien payer.</p>
+        <div class="price">0 €<small>pour toujours</small></div>
+        <ul>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg> 1 personne</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg> 30 documents par mois</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg> Facturation électronique</li>
+        </ul>
+        <a class="btn btn-w btn-full" href="https://tigerseo13-del.github.io/sastigerflow/inscription.html">Créer mon compte</a>
+      </div>
+      <div class="plan">
+        <h3>Équipe</h3>
+        <p class="who">Pour mettre vos techniciens sur l'appli.</p>
+        <div class="price"><span data-m="39 €" data-a="35,75 €">39 €</span><small data-m="HT par utilisateur et par mois" data-a="HT par utilisateur et par mois, soit 429 € par an">HT par utilisateur et par mois</small></div>
+        <ul>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg> Appli mobile technicien</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg> 20 SMS par mois</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg> 20 signatures par mois</li>
+        </ul>
+        <a class="btn btn-w btn-full" href="https://tigerseo13-del.github.io/sastigerflow/inscription.html">Essai gratuit</a>
+      </div>
+      <div class="plan best">
+        <span class="tag">Conseillé</span>
+        <h3>Pro</h3>
+        <p class="who">Pour encaisser sur place et ne plus courir après les impayés.</p>
+        <div class="price"><span data-m="49 €" data-a="44,92 €">49 €</span><small data-m="HT par utilisateur et par mois" data-a="HT par utilisateur et par mois, soit 539 € par an">HT par utilisateur et par mois</small></div>
+        <ul>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg> Tout Équipe</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg> Encaissement sur place par carte (Stripe)</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg> Contrats pro avec signature en ligne</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg> Rappels de paiement automatiques</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg> 40 SMS et 40 signatures par mois</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg> Statistiques par technicien</li>
+        </ul>
+        <a class="btn btn-o btn-full" href="https://tigerseo13-del.github.io/sastigerflow/inscription.html">Essai gratuit 14 jours</a>
+      </div>
+    </div>
+    <p class="fine" style="margin-top:28px;color:var(--ink)"><b>Bientôt, en option :</b> la relance automatique des devis par SMS et e-mail.</p>
+    <p class="fine">Prix HT · Sans engagement · 14 jours d'essai · Hébergement en Europe</p>
+  </div>
+</section>
+
+<section class="sec" id="comparatif">
+  <div class="w">
+    <p class="eyebrow">Pourquoi pas un autre outil</p>
+    <h2>Fait pour la 3D, pas adapté après coup.</h2>
+    <div class="cmp-wrap">
+      <table class="cmp">
+        <thead><tr><th></th><th>Excel + papier</th><th>Logiciel généraliste</th><th class="tf">TigerFlow</th></tr></thead>
+        <tbody>
+          <tr><td>Planning par technicien</td><td class="no">Tableau blanc, coups de fil</td><td>Oui</td><td class="tf">Oui, en glisser-déposer</td></tr>
+          <tr><td>Nuisibles et types de passage</td><td class="no">Dans votre tête</td><td>À paramétrer vous-même</td><td class="tf">Déjà en place</td></tr>
+          <tr><td>Contrats syndics, passages récurrents</td><td class="no">À replanifier à la main</td><td>Selon l'outil</td><td class="tf">Planifiés et facturés à la date</td></tr>
+          <tr><td>Plan d'appâtage</td><td class="no">Classeur</td><td class="no">Non prévu</td><td class="tf">Postes numérotés, relevés par passage</td></tr>
+          <tr><td>Rapport d'intervention</td><td class="no">Rédigé le soir</td><td>Modèle générique</td><td class="tf">Rempli sur place, envoyé au client</td></tr>
+          <tr><td>Paiement sur place</td><td class="no">Chèque ou espèces</td><td>Selon l'outil</td><td class="tf">Adapté au type d'intervention : carte, lien, espèces</td></tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</section>
+
+<section class="sec" id="facture-electronique" style="padding-top:0">
+  <div class="w">
+    <div class="efact">
+      <div>
+        <p class="eyebrow">Facturation électronique</p>
+        <h2>L'obligation arrive. Avec TigerFlow, c'est déjà réglé.</h2>
+        <p>La facturation électronique devient obligatoire pour toutes les entreprises françaises, par étapes. Elle est incluse dans TigerFlow, dès la formule Gratuit.</p>
+        <span class="ok"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg> Incluse dans toutes les formules</span>
+      </div>
+      <ul class="dates">
+        <li class="done"><span class="dt"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg></span><div><b>1er septembre 2026 <em>En vigueur</em></b><span>Toutes les entreprises doivent pouvoir recevoir des factures électroniques.</span></div></li>
+        <li class="next"><span class="dt"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg></span><div><b>1er septembre 2027 <em>À venir</em></b><span>Les TPE, PME et micro-entreprises doivent émettre leurs factures au format électronique.</span></div></li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<section class="sec" style="padding-top:0">
+  <div class="w">
+    <div class="founder">
+      <div class="mark"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"/></svg></div>
+      <div>
+        <h2 style="font-size:clamp(1.4rem,2.6vw,1.9rem)">Conçu par un dératiseur, pas par un éditeur de logiciels.</h2>
+        <p>TigerFlow est né dans une entreprise de 3D, pour régler ses propres problèmes : les codes postaux à dicter au téléphone, les contrats de syndics à replanifier, les devis qui dorment. Chaque écran a été pensé pour le métier, pas adapté d'un logiciel de plombier.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="sec" id="rappel" style="padding-bottom:0">
+  <div class="w">
+    <div class="call">
+      <div>
+        <p class="eyebrow">Pas le temps de tester ?</p>
+        <h2 style="font-size:clamp(1.5rem,3vw,2.1rem)">Laissez votre numéro, on vous montre le logiciel en 15 minutes.</h2>
+        <p style="margin-top:14px">On vous rappelle dans la journée, on partage l'écran, et vous voyez TigerFlow tourner sur un cas comme le vôtre. Sans engagement.</p>
+      </div>
+      <form id="cb" novalidate>
+        <label>Votre prénom<input name="prenom" autocomplete="given-name" required></label>
+        <label>Votre société<input name="societe" autocomplete="organization"></label>
+        <label>Votre téléphone<input name="telephone" type="tel" inputmode="tel" autocomplete="tel" placeholder="06 12 34 56 78" required></label>
+        <fieldset class="pref">
+          <legend>Je préfère être contacté par</legend>
+          <label><input type="radio" name="canal" value="Téléphone" checked><span>Téléphone</span></label>
+          <label><input type="radio" name="canal" value="WhatsApp"><span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"/></svg>WhatsApp</span></label>
+        </fieldset>
+        <input class="hp" name="site_web" tabindex="-1" autocomplete="off" aria-hidden="true">
+        <button class="btn btn-o btn-full" type="submit">Être rappelé</button>
+        <a class="btn wa" id="wa1" target="_blank" rel="noopener" hidden>Écrire sur WhatsApp</a>
+        <p class="msg" id="cbm" role="status"></p>
+        <p class="rgpd">Vos coordonnées servent uniquement à vous recontacter. <a href="https://tigerseo13-del.github.io/sastigerflow/confidentialite.html">Confidentialité</a></p>
+      </form>
+    </div>
+  </div>
+</section>
+
+<section class="sec" id="faq">
+  <div class="w">
+    <div style="max-width:780px;margin:0 auto">
+      <p class="eyebrow">Questions</p>
+      <h2>Ce qu'on nous demande le plus</h2>
+    </div>
+    <div class="faq">
+      <details open><summary>Je dois donner ma carte pour l'essai ?</summary><p>Non. 14 jours d'essai sans carte bancaire. À la fin, vous décidez.</p></details>
+      <details><summary>J'ai 800 clients dans Excel, je fais comment ?</summary><p>Vous nous envoyez le fichier, on l'importe pour vous, gratuitement, sous 24 h. Zéro ligne à ressaisir.</p></details>
+      <details><summary>Mes techniciens ne sont pas à l'aise avec les logiciels.</summary><p>L'appli technicien a trois boutons : ma journée, mon intervention, mon rapport. S'ils savent envoyer un SMS, ils savent utiliser TigerFlow.</p></details>
+      <details><summary>Est-ce que ça gère les contrats annuels avec les syndics ?</summary><p>Oui. Un contrat, ce sont des passages planifiés d'avance et des factures qui partent à la bonne date, sans y penser.</p></details>
+      <details><summary>Et la facturation électronique obligatoire ?</summary><p>Depuis le 1er septembre 2026, toutes les entreprises doivent pouvoir recevoir des factures électroniques. Pour les TPE, PME et micro-entreprises, l'obligation d'en émettre arrive le 1er septembre 2027. La facturation électronique est incluse dans TigerFlow, dès la formule Gratuit.</p></details>
+      <details><summary>Et si j'arrête ?</summary><p>Vous résiliez quand vous voulez depuis votre espace, et vous récupérez toutes vos données.</p></details>
+      <details><summary>Où sont stockées mes données ?</summary><p>En Europe, chez Amazon Web Services. Elles sont sauvegardées chaque jour.</p></details>
+    </div>
+  </div>
+</section>
+
+<section class="final">
+  <div class="w">
+    <svg class="clock" viewBox="0 0 100 100" aria-hidden="true"><circle cx="50" cy="50" r="44"/><path d="M50 10v7M90 50h-7M50 90v-7M10 50h7"/><line class="hh" x1="50" y1="50" x2="50" y2="27"/><line class="mh" x1="50" y1="50" x2="50" y2="17"/><circle class="pin" cx="50" cy="50" r="4"/></svg>
+    <h2>Demain à 18 h, vous êtes chez vous.</h2>
+    <p>14 jours gratuits. Sans carte. Vos clients importés pour vous.</p>
+    <a class="btn" href="https://tigerseo13-del.github.io/sastigerflow/inscription.html">Je commence mon essai gratuit <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+    <a class="alt" href="#rappel">ou être rappelé pour une démo de 15 minutes</a>
+  </div>
+</section>
+</main>
+
+<footer>
+  <div class="w">
+    <div class="fgrid">
+      <div class="fbrand">
+        <img src="tf-logo-blanc.svg" alt="TigerFlow" width="190" height="42">
+        <p>Le logiciel des entreprises antinuisibles : planning, techniciens, devis, factures et encaissement dans un seul outil.</p>
+        <a class="btn btn-o" href="https://tigerseo13-del.github.io/sastigerflow/inscription.html">Essai gratuit 14 jours <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+      </div>
+      <nav aria-label="Le produit">
+        <h4>Le produit</h4>
+        <a href="#produit">Le logiciel</a>
+        <a href="#appli">L'appli technicien</a>
+        <a href="#encaissement">L'encaissement</a>
+        <a href="#signature">La signature en ligne</a>
+        <a href="#comparatif">Comparatif</a>
+        <a href="#prix">Prix</a>
+      </nav>
+      <nav aria-label="Démarrer">
+        <h4>Démarrer</h4>
+        <a href="https://tigerseo13-del.github.io/sastigerflow/inscription.html">Créer mon compte</a>
+        <a href="#rappel">Être rappelé</a>
+        <a href="#faq">Questions fréquentes</a>
+        <a href="https://tigerseo13-del.github.io/sastigerflow/connexion.html">Se connecter</a>
+      </nav>
+      <nav aria-label="Informations légales">
+        <h4>Légal</h4>
+        <a href="https://tigerseo13-del.github.io/sastigerflow/mentions-legales.html">Mentions légales</a>
+        <a href="https://tigerseo13-del.github.io/sastigerflow/cgv.html">CGV</a>
+        <a href="https://tigerseo13-del.github.io/sastigerflow/confidentialite.html">Confidentialité</a>
+      </nav>
+    </div>
+    <div class="fbot">
+      <span>© 2026 TigerFlow. Tous droits réservés.</span>
+      <span class="fpill"><i></i> Données hébergées en Europe</span>
+    </div>
+  </div>
+</footer>
+
+<div class="chat" id="chat">
+  <div class="chat-box" id="chatbox" role="dialog" aria-label="Poser une question à Floriant" hidden>
+    <div class="chat-h">
+      <span class="av">F<i></i></span>
+      <div><b>Floriant · TigerFlow</b><small>Réponse en moins de 5 minutes</small></div>
+      <button class="chat-x" type="button" id="chatx" aria-label="Fermer">×</button>
+    </div>
+    <form class="chat-b" id="cq" novalidate>
+      <p class="say">Bonjour ! Posez-moi votre question, je vous réponds par e-mail ou par téléphone.</p>
+      <input name="societe" placeholder="Votre société" autocomplete="organization" aria-label="Votre société">
+      <input name="contact" placeholder="E-mail ou téléphone" autocomplete="email" aria-label="E-mail ou téléphone" required>
+      <textarea name="question" rows="3" placeholder="Votre question" aria-label="Votre question" required></textarea>
+      <input class="hp" name="site_web" tabindex="-1" autocomplete="off" aria-hidden="true">
+      <button class="btn btn-o" type="submit">Envoyer</button>
+      <p class="msg" id="cqm" role="status"></p>
+      <a class="btn wa" id="wa2" target="_blank" rel="noopener" hidden>Écrire sur WhatsApp</a>
+      <a class="more" href="#faq" id="chatfaq">Voir les questions fréquentes</a>
+    </form>
+  </div>
+  <button class="chat-pill" type="button" id="chatb" aria-expanded="false" aria-controls="chatbox">
+    <span class="av">F<i></i></span>
+    <span class="tx"><b>Une question ? Floriant est là</b><small>Réponse en moins de 5 minutes</small></span>
+  </button>
+</div>
+
+<div class="mcta" id="mcta">
+  <a class="btn btn-w" href="#rappel">Être rappelé</a>
+  <a class="btn btn-o" href="https://tigerseo13-del.github.io/sastigerflow/inscription.html">Essai gratuit</a>
+</div>
+
+<script>
+(function(){
+  var h=document.querySelector('header');
+  var mc=document.getElementById('mcta');
+  addEventListener('scroll',function(){h.classList.toggle('scrolled',scrollY>8);mc.classList.toggle('on',scrollY>520)},{passive:true});
+
+  var bm=document.getElementById('bm'),ba=document.getElementById('ba');
+  function bill(a){
+    bm.setAttribute('aria-pressed',!a);ba.setAttribute('aria-pressed',a);
+    document.querySelectorAll('[data-m]').forEach(function(e){e.textContent=e.getAttribute(a?'data-a':'data-m')});
+  }
+  bm.addEventListener('click',function(){bill(false)});ba.addEventListener('click',function(){bill(true)});
+
+
+  /* === ENVOI DES DEMANDES (rappel + bulle) ===
+     Les demandes partent par e-mail vers LEAD_EMAIL via le service FormSubmit.
+     La toute première demande déclenche un e-mail « Activate Form » : il faut cliquer dessus une fois.
+     WHATSAPP_NUMBER : numéro au format international sans + ni espaces (ex. 33612345678).
+     Tant qu'il est vide, les boutons « Écrire sur WhatsApp » restent cachés. */
+  var LEAD_EMAIL='tigerflow.team@gmail.com';
+  var WHATSAPP_NUMBER='';
+  var CALLBACK_URL='https://formsubmit.co/ajax/'+LEAD_EMAIL;
+  function sendLead(data,form,msg,okText){
+    var b=form.querySelector('button[type=submit]');b.disabled=true;msg.className='msg';msg.textContent='Envoi…';
+    data._template='table';data._captcha='false';data.Page=location.href;
+    return fetch(CALLBACK_URL,{method:'POST',headers:{'Content-Type':'application/json','Accept':'application/json'},body:JSON.stringify(data)})
+      .then(function(r){if(!r.ok)throw 0;return r.json()})
+      .then(function(j){if(j&&String(j.success)==='false')throw 0;form.reset();msg.className='msg ok';msg.textContent=okText})
+      .catch(function(){msg.className='msg ko';msg.textContent="L'envoi n'a pas fonctionné. Réessayez dans un instant."})
+      .then(function(){b.disabled=false});
+  }
+  if(WHATSAPP_NUMBER){
+    ['wa1','wa2'].forEach(function(id){
+      var a=document.getElementById(id);a.hidden=false;
+      a.href='https://wa.me/'+WHATSAPP_NUMBER+'?text='+encodeURIComponent('Bonjour, je souhaite en savoir plus sur TigerFlow.');
+    });
+  }
+
+  var cb=document.getElementById('cb'),cbm=document.getElementById('cbm');
+  cb.addEventListener('submit',function(e){
+    e.preventDefault();
+    var d=new FormData(cb),tel=(d.get('telephone')||'').replace(/[^0-9+]/g,'');
+    cbm.className='msg ko';
+    if(d.get('site_web'))return;
+    if(!d.get('prenom')||tel.length<10){cbm.textContent='Indiquez votre prénom et un numéro de téléphone valide.';return}
+    sendLead({_subject:'Landing TigerFlow — demande de rappel ('+d.get('prenom')+')',Type:'Demande de rappel','Prénom':d.get('prenom'),'Société':d.get('societe')||'—','Téléphone':tel,'Contact préféré':d.get('canal')},cb,cbm,"C'est noté, on vous recontacte dans la journée.");
+  });
+
+  /* === BULLE "UNE QUESTION ?" === */
+  var cbx=document.getElementById('chatbox'),cbb=document.getElementById('chatb'),cq=document.getElementById('cq'),cqm=document.getElementById('cqm');
+  function chat(o){cbx.hidden=!o;cbb.setAttribute('aria-expanded',o);if(o){var f=cq.querySelector('[name=contact]');setTimeout(function(){f.focus({preventScroll:true})},60)}}
+  cbb.addEventListener('click',function(){chat(cbx.hidden)});
+  document.getElementById('chatx').addEventListener('click',function(){chat(false);cbb.focus()});
+  document.getElementById('chatfaq').addEventListener('click',function(){chat(false)});
+  addEventListener('keydown',function(e){if(e.key==='Escape'&&!cbx.hidden){chat(false);cbb.focus()}});
+  cq.addEventListener('submit',function(e){
+    e.preventDefault();
+    var d=new FormData(cq),c=(d.get('contact')||'').trim(),q=(d.get('question')||'').trim();
+    cqm.className='msg ko';
+    if(d.get('site_web'))return;
+    if(c.length<6||q.length<3){cqm.textContent='Indiquez un e-mail ou un téléphone, et votre question.';return}
+    sendLead({_subject:'Landing TigerFlow — question',Type:'Question (bulle Floriant)','Société':d.get('societe')||'—','Contact':c,'Question':q},cq,cqm,'Bien reçu, Floriant vous répond très vite.');
+  });
+
+  /* === ANIMATIONS === */
+  var reduce=matchMedia('(prefers-reduced-motion: reduce)').matches;
+  var wide=function(){return innerWidth>=960};
+  function el(tag,c){var e=document.createElement(tag);e.className=c;return e}
+  function clamp(v){return v<0?0:v>1?1:v}
+
+  /* visite guidée : le texte défile, la capture reste à l'écran et change */
+  var prod=document.getElementById('produit'),rows=[].slice.call(prod.querySelectorAll('.row')),simg=[],cur=-1;
+  var grid=el('div','tourgrid'),col=el('div','tourcol'),sc=el('div','stagecol'),stage=el('div','stage'),rail=el('div','rail'),tag=el('span','stage-tag'),num=el('span','stage-n');
+  rows[0].parentNode.insertBefore(grid,rows[0]);grid.appendChild(col);grid.appendChild(sc);sc.appendChild(stage);col.appendChild(rail);
+  rows.forEach(function(r){
+    col.appendChild(r);
+    var im=r.querySelector('img').cloneNode(false);im.removeAttribute('loading');im.alt='';im.decoding='async';
+    stage.appendChild(im);simg.push(im);
+  });
+  stage.appendChild(tag);stage.appendChild(num);prod.classList.add('tour');
+  function tour(){
+    if(!wide())return;
+    var mid=innerHeight/2,best=0,bd=1e9;
+    rows.forEach(function(r,i){var b=r.getBoundingClientRect(),d=Math.abs((b.top+b.bottom)/2-mid);if(d<bd){bd=d;best=i}});
+    if(best!==cur){
+      cur=best;
+      rows.forEach(function(r,i){r.classList.toggle('on',i===best)});
+      simg.forEach(function(im,i){im.classList.toggle('on',i===best);im.classList.toggle('was',i<best)});
+      tag.textContent=rows[best].querySelector('.step').textContent;num.textContent=(best+1)+' / '+rows.length;
+    }
+    var cb=col.getBoundingClientRect(),pad=innerHeight*.12;
+    col.style.setProperty('--p',clamp((mid-cb.top-pad)/(cb.height-2*pad)));
+  }
+
+  /* apparitions au défilement */
+  function mark(sel,cls,n,ms){
+    document.querySelectorAll(sel).forEach(function(e,i){
+      e.classList.add('rv');if(cls)e.classList.add(cls);
+      if(n)e.style.transitionDelay=((i%n)*ms)+'ms';
+    });
+  }
+  mark('main .sec .eyebrow, main .sec .lead, .final p, .final .btn, .final .alt, .final .clock','',0,0);
+  /* les titres montent mot par mot */
+  var h2s=[].slice.call(document.querySelectorAll('main h2')).filter(function(h){return !h.children.length});
+  h2s.forEach(function(h){
+    var ws=h.textContent.trim().split(/\s+/),out=[],n=0;
+    ws.forEach(function(w){
+      if(/^[?!:;»]+$/.test(w)&&out.length){out[out.length-1].t+='\u00a0'+w}else out.push({t:w});
+    });
+    h.setAttribute('aria-label',h.textContent.trim());
+    h.innerHTML=out.map(function(o){return '<span class="w2" aria-hidden="true"><span style="--i:'+(n++)+'">'+o.t.replace(/&/g,'&amp;').replace(/</g,'&lt;')+'</span></span>'}).join(' ');
+    h.classList.add('spl');
+  });
+  mark('.grid3 .card','rv-z',3,120);
+  if(!wide()){mark('.row .txt','',0,0);mark('.row figure','rv-z',0,0)}
+  var ph=document.querySelector('.phones'),pimgs=[].slice.call(ph.querySelectorAll('img')),fanOn=innerWidth>1000&&!reduce;
+  if(!fanOn)mark('.phones img','rv-z',6,90);
+  mark('.sign > div:first-child','rv-l',0,0);mark('.signs','rv-r',0,0);
+  mark('.pay','rv-z',4,110);
+  mark('.paynote, .efact','',0,0);
+  mark('.dates li','rv-l',2,180);
+  mark('.mod','rv-z',4,70);
+  mark('.cmp tbody tr','',6,80);
+  mark('.founder, .call, .toggle, .fine','',0,0);
+  mark('.plan','rv-z',3,130);
+  mark('.faq details','',6,70);
+  mark('.fgrid > *','',4,90);
+  function countUp(sp){
+    if(!sp||reduce)return;
+    var final=sp.textContent,m=final.match(/^(\d+)(,\d+)?(.*)$/);if(!m)return;
+    var to=+m[1],t0=null;
+    function st(ts){if(!t0)t0=ts;var k=Math.min(1,(ts-t0)/1000),e=1-Math.pow(1-k,3);sp.textContent=k<1?Math.round(to*e)+m[3]:final;if(k<1)requestAnimationFrame(st)}
+    sp.textContent='0'+m[3];setTimeout(function(){requestAnimationFrame(st)},250);
+  }
+  var els=document.querySelectorAll('.rv');
+  function show(e){
+    e.classList.add('in','seen');
+    if(e.classList.contains('plan'))countUp(e.querySelector('.price [data-m]'));
+    var d=parseFloat(e.style.transitionDelay)||0;
+    setTimeout(function(){e.style.transitionDelay='';e.classList.remove('rv','rv-l','rv-r','rv-z','in')},d+950);
+  }
+  if(reduce||!('IntersectionObserver' in window)){els.forEach(function(e){e.classList.remove('rv','rv-l','rv-r','rv-z');e.style.transitionDelay='';e.classList.add('seen')});h2s.forEach(function(h){h.classList.add('seen')})}
+  else{
+    var ioh=new IntersectionObserver(function(es){es.forEach(function(en){if(en.isIntersecting){en.target.classList.add('seen');ioh.unobserve(en.target)}})},{rootMargin:'0px 0px -8% 0px',threshold:.2});
+    h2s.forEach(function(h){ioh.observe(h)});
+    var io=new IntersectionObserver(function(es){es.forEach(function(en){if(en.isIntersecting){show(en.target);io.unobserve(en.target)}})},{rootMargin:'0px 0px -7% 0px',threshold:.08});
+    els.forEach(function(e){if(e.parentNode!==ph)io.observe(e)});
+    if(!fanOn){
+      var io3=new IntersectionObserver(function(es){if(es[0].isIntersecting){io3.disconnect();pimgs.forEach(show)}},{threshold:.15});
+      io3.observe(ph);
+    }
+  }
+
+  /* halo qui suit la souris sur les cartes */
+  document.querySelectorAll('.mod,.plan,.card,.pay').forEach(function(e){
+    e.addEventListener('pointermove',function(ev){var b=e.getBoundingClientRect();e.style.setProperty('--mx',(ev.clientX-b.left)+'px');e.style.setProperty('--my',(ev.clientY-b.top)+'px')});
+    e.addEventListener('pointerleave',function(){e.style.setProperty('--mx','-500px');e.style.setProperty('--my','-500px')});
+  });
+
+  var sg=document.getElementById('signs');
+  if(reduce||!('IntersectionObserver' in window))sg.classList.add('go');
+  else{var io4=new IntersectionObserver(function(es){if(es[0].isIntersecting){io4.disconnect();sg.classList.add('go')}},{threshold:.45});io4.observe(sg)}
+
+  /* les téléphones se déploient en éventail pendant le défilement */
+  function fan(){
+    if(!fanOn)return;
+    var b=ph.getBoundingClientRect(),p=clamp((innerHeight*.98-b.top)/(innerHeight*.62)),k=1-(1-Math.pow(1-p,3));
+    ph.classList.toggle('float',p>=1);
+    pimgs.forEach(function(im,i){
+      if(p>=1){im.style.transform='';im.style.opacity='';return}
+      im.style.transform='translateY('+(k*(90+i*46)).toFixed(1)+'px) rotate('+(k*(i-2.5)*6).toFixed(2)+'deg)';
+      im.style.opacity=clamp(p*2.2-i*.12).toFixed(3);
+    });
+  }
+
+  /* la capture du hero se redresse en descendant + barre de progression */
+  var fr=document.querySelector('.hero .frame'),pg=document.getElementById('prog'),tick=false;
+  function frame(){
+    tick=false;
+    var p=Math.min(1,scrollY/460),max=document.documentElement.scrollHeight-innerHeight;
+    pg.style.transform='scaleX('+(max>0?clamp(scrollY/max):0).toFixed(4)+')';
+    if(!reduce)fr.style.transform=innerWidth>760?'perspective(1800px) rotateX('+((1-p)*10).toFixed(2)+'deg) scale('+(0.95+0.05*p).toFixed(4)+')':'';
+    tour();fan();
+  }
+  frame();
+  addEventListener('scroll',function(){if(!tick){tick=true;requestAnimationFrame(frame)}},{passive:true});
+  addEventListener('resize',function(){cur=-1;frame()});
+
+
+})();
+</script>
+</body>
+</html>
