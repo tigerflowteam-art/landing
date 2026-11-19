@@ -74,7 +74,7 @@ header.scrolled{border-color:var(--line)}
 .frame .bar{height:34px;background:#F1F2F5;border-bottom:1px solid var(--line);display:flex;align-items:center;gap:7px;padding:0 14px}
 .frame .bar i{width:10px;height:10px;border-radius:50%;background:#D5D8DF;display:block}
 .frame .bar span{margin-left:14px;font-size:.72rem;color:var(--mut);background:#fff;border:1px solid var(--line);border-radius:6px;padding:2px 12px}
-.hero-shot{position:relative;max-width:1120px;margin:56px auto -120px;z-index:2}
+.hero-shot{position:relative;max-width:1120px;margin:44px auto -120px;z-index:2}
 .hero .frame{margin:0;position:relative}
 .after-hero{padding-top:176px}
 figcaption{font-size:.84rem;color:var(--mut);margin-top:12px;text-align:center}
@@ -424,8 +424,8 @@ main{overflow-x:clip}
 @keyframes pulse{0%{box-shadow:0 0 0 0 rgba(18,183,106,.55)}70%{box-shadow:0 0 0 9px rgba(18,183,106,0)}100%{box-shadow:0 0 0 0 rgba(18,183,106,0)}}
 @keyframes bump{0%{transform:scale(1)}40%{transform:scale(1.06)}100%{transform:scale(1)}}
 @keyframes shine{from{transform:translateX(-120%) skewX(-20deg)}to{transform:translateX(320%) skewX(-20deg)}}
-.js .hero .eyebrow,.js .hero .sub,.js .hero .cta,.js .hero .ticks,.js .hero .vhint,.js .hero .vtabs{animation:fadeUp .8s cubic-bezier(.2,.7,.2,1) both}
-.js .hero .sub{animation-delay:.55s}.js .hero .cta{animation-delay:.7s}.js .hero .ticks{animation-delay:.85s}.js .hero .vhint,.js .hero .vtabs{animation-delay:1s}
+.js .hero .eyebrow,.js .hero .sub,.js .hero .cta,.js .hero .ticks,.js .hero .vtabs{animation:fadeUp .8s cubic-bezier(.2,.7,.2,1) both}
+.js .hero .sub{animation-delay:.55s}.js .hero .cta{animation-delay:.7s}.js .hero .ticks{animation-delay:.85s}.js .hero .vtabs{animation-delay:1s}
 .js .hero .frame{animation:frameIn 1.1s cubic-bezier(.2,.7,.2,1) .9s both;transform-origin:50% 0;will-change:transform}
 .hero{position:relative;overflow-x:clip}
 .hero::before{content:"";position:absolute;left:50%;top:-180px;width:900px;height:520px;margin-left:-450px;background:radial-gradient(closest-side,rgba(255,90,31,.18),rgba(255,90,31,0));pointer-events:none}
@@ -595,11 +595,9 @@ summary:hover{color:var(--o)}
     <ul class="ticks">
       <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg> 14 jours gratuits</li>
       <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg> Sans carte bancaire</li>
-      <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg> On importe vos clients pour vous</li>
     </ul>
     <div class="hero-shot">
-    <p class="vhint">Choisissez l'écran à voir</p>
-      <div class="vtabs" role="tablist" aria-label="Écrans du logiciel"><button type="button" role="tab" aria-selected="true" data-i="0">Calendrier</button><button type="button" role="tab" aria-selected="false" data-i="1">Création de devis</button><button type="button" role="tab" aria-selected="false" data-i="2">Création de contrat</button><button type="button" role="tab" aria-selected="false" data-i="3">Techniciens</button></div>
+    <div class="vtabs" role="tablist" aria-label="Écrans du logiciel"><button type="button" role="tab" aria-selected="true" data-i="0">Calendrier</button><button type="button" role="tab" aria-selected="false" data-i="1">Création de devis</button><button type="button" role="tab" aria-selected="false" data-i="2">Création de contrat</button><button type="button" role="tab" aria-selected="false" data-i="3">Techniciens</button></div>
       <figure class="frame" id="viewer">
         <div class="bar"><i></i><i></i><i></i><span id="vtitle">TigerFlow · Calendrier</span></div>
         <div class="vstage"><img class="on" fetchpriority="high" src="tf-cal.webp" width="1449" height="840" alt="Le calendrier de TigerFlow : une colonne par technicien, les interventions de la journée classées par code postal et par nuisible"><img data-src="tf-h-newdevis.webp" width="1456" height="824" alt="L'écran de création d'un devis : client, lignes de prestations, quantités, TVA et total"><img data-src="tf-h-newcontrat.webp" width="1456" height="824" alt="L'écran de création d'un contrat : client, type de contrat, période, fréquence de facturation"><img data-src="tf-h-tech.webp" width="1456" height="824" alt="La rubrique Techniciens : compétences, statut, interventions terminées, chiffre d'affaires généré, ponctualité"><div class="vprog"><b id="vp"></b></div></div>
