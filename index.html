@@ -74,7 +74,7 @@ header.scrolled{border-color:var(--line)}
 .frame .bar{height:34px;background:#F1F2F5;border-bottom:1px solid var(--line);display:flex;align-items:center;gap:7px;padding:0 14px}
 .frame .bar i{width:10px;height:10px;border-radius:50%;background:#D5D8DF;display:block}
 .frame .bar span{margin-left:14px;font-size:.72rem;color:var(--mut);background:#fff;border:1px solid var(--line);border-radius:6px;padding:2px 12px}
-.hero-shot{position:relative;max-width:1120px;margin:64px auto -120px;z-index:2}
+.hero-shot{position:relative;max-width:1120px;margin:56px auto -120px;z-index:2}
 .hero .frame{margin:0;position:relative}
 .after-hero{padding-top:176px}
 figcaption{font-size:.84rem;color:var(--mut);margin-top:12px;text-align:center}
@@ -392,19 +392,21 @@ footer nav a:hover{color:var(--o)}
 @media(prefers-reduced-motion:reduce){.js .signs .box path{stroke-dashoffset:0;transition:none}.js .signs .st{opacity:1;transform:none;transition:none}}
 
 /* ---------- visionneuse du hero ---------- */
-.frame .bar{height:auto;min-height:46px;padding:7px 14px;gap:7px}
-.vtabs{display:flex;gap:4px;margin-left:12px;overflow-x:auto;scrollbar-width:none;flex:1}
-.vtabs::-webkit-scrollbar{display:none}
-.vtabs button{flex:none;font:600 .82rem/1 Inter,sans-serif;color:var(--mut);background:none;border:1px solid transparent;border-radius:8px;padding:9px 12px;cursor:pointer;white-space:nowrap;transition:background .2s,color .2s}
-.vtabs button:hover{color:var(--ink);background:#E7E9EE}
-.vtabs button[aria-selected=true]{background:#fff;color:var(--ink);border-color:var(--line);box-shadow:0 1px 2px rgba(16,18,22,.08)}
-.vtabs button[aria-selected=true]::before{content:"";display:inline-block;width:7px;height:7px;border-radius:50%;background:var(--o);margin-right:7px;vertical-align:1px}
+.vhint{font:600 .74rem/1 Inter,sans-serif;letter-spacing:.14em;text-transform:uppercase;color:var(--mut);margin-bottom:14px}
+.vtabs{display:flex;gap:10px;justify-content:center;flex-wrap:wrap;margin-bottom:22px}
+.vtabs button{font:600 .95rem/1 Inter,sans-serif;color:var(--ink);background:#fff;border:1.5px solid #D5D8DF;border-radius:999px;padding:13px 20px;cursor:pointer;white-space:nowrap;box-shadow:0 1px 2px rgba(16,18,22,.06);transition:background .2s,color .2s,border-color .2s,transform .15s,box-shadow .2s}
+.vtabs button:hover{border-color:var(--o);color:var(--o);transform:translateY(-2px)}
+.vtabs button[aria-selected=true]{background:var(--o);border-color:var(--o);color:#fff;box-shadow:0 10px 22px -10px rgba(255,90,31,.8)}
+.varr{position:absolute;top:50%;width:52px;height:52px;margin-top:-26px;border-radius:50%;border:0;background:var(--o);color:#fff;display:grid;place-items:center;cursor:pointer;box-shadow:0 10px 24px -8px rgba(16,18,22,.6),0 0 0 3px rgba(255,255,255,.9);transition:background .2s,transform .2s;z-index:2}
+.varr svg{width:24px;height:24px}
+.varr.l{left:14px}.varr.r{right:14px}
+.varr:hover{background:var(--o-d);transform:scale(1.08)}
+@media(max-width:760px){.vtabs{flex-wrap:nowrap;justify-content:flex-start;overflow-x:auto;scrollbar-width:none;margin:0 -24px 16px;padding:4px 24px}.vtabs::-webkit-scrollbar{display:none}.vtabs button{flex:none;padding:11px 16px;font-size:.88rem}.varr{width:38px;height:38px;margin-top:-19px}.varr svg{width:18px;height:18px}.varr.l{left:6px}.varr.r{right:6px}}
 .vstage{position:relative;aspect-ratio:1449/840;background:#fff;overflow:hidden}
 .vstage img{position:absolute;inset:0;width:100%;height:100%;opacity:0;transform:scale(1.025);transition:opacity .45s ease,transform .7s cubic-bezier(.2,.7,.2,1)}
 .vstage img.on{opacity:1;transform:none}
 .vprog{position:absolute;left:0;right:0;bottom:0;height:3px;background:rgba(16,18,22,.06)}
 .vprog b{display:block;height:100%;width:0;background:var(--o)}
-@media(max-width:600px){.frame .bar>i{display:none}.vtabs{margin-left:0}.vtabs button{padding:8px 10px;font-size:.78rem}}
 @media(prefers-reduced-motion:reduce){.vstage img{transition:none;transform:none}}
 
 /* ---------- animations ---------- */
@@ -421,8 +423,8 @@ main{overflow-x:clip}
 @keyframes pulse{0%{box-shadow:0 0 0 0 rgba(18,183,106,.55)}70%{box-shadow:0 0 0 9px rgba(18,183,106,0)}100%{box-shadow:0 0 0 0 rgba(18,183,106,0)}}
 @keyframes bump{0%{transform:scale(1)}40%{transform:scale(1.06)}100%{transform:scale(1)}}
 @keyframes shine{from{transform:translateX(-120%) skewX(-20deg)}to{transform:translateX(320%) skewX(-20deg)}}
-.js .hero .eyebrow,.js .hero .sub,.js .hero .cta,.js .hero .ticks{animation:fadeUp .8s cubic-bezier(.2,.7,.2,1) both}
-.js .hero .sub{animation-delay:.55s}.js .hero .cta{animation-delay:.7s}.js .hero .ticks{animation-delay:.85s}
+.js .hero .eyebrow,.js .hero .sub,.js .hero .cta,.js .hero .ticks,.js .hero .vhint,.js .hero .vtabs{animation:fadeUp .8s cubic-bezier(.2,.7,.2,1) both}
+.js .hero .sub{animation-delay:.55s}.js .hero .cta{animation-delay:.7s}.js .hero .ticks{animation-delay:.85s}.js .hero .vhint,.js .hero .vtabs{animation-delay:1s}
 .js .hero .frame{animation:frameIn 1.1s cubic-bezier(.2,.7,.2,1) .9s both;transform-origin:50% 0;will-change:transform}
 .hero{position:relative;overflow-x:clip}
 .hero::before{content:"";position:absolute;left:50%;top:-180px;width:900px;height:520px;margin-left:-450px;background:radial-gradient(closest-side,rgba(255,90,31,.18),rgba(255,90,31,0));pointer-events:none}
@@ -595,9 +597,11 @@ summary:hover{color:var(--o)}
       <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg> On importe vos clients pour vous</li>
     </ul>
     <div class="hero-shot">
-    <figure class="frame" id="viewer">
-        <div class="bar"><i></i><i></i><i></i><div class="vtabs" role="tablist" aria-label="Écrans du logiciel"><button type="button" role="tab" aria-selected="true" data-i="0">Calendrier</button><button type="button" role="tab" aria-selected="false" data-i="1">Devis</button><button type="button" role="tab" aria-selected="false" data-i="2">Fiche devis</button><button type="button" role="tab" aria-selected="false" data-i="3">Clients</button><button type="button" role="tab" aria-selected="false" data-i="4">Paiements</button><button type="button" role="tab" aria-selected="false" data-i="5">Tableau de bord</button></div></div>
-        <div class="vstage"><img class="on" fetchpriority="high" src="tf-cal.webp" width="1449" height="840" alt="Le calendrier de TigerFlow : une colonne par technicien, les interventions de la journée classées par code postal et par nuisible"><img data-src="tf-h-devis.webp" width="1449" height="840" alt="La liste des devis : en attente, expirant bientôt, gagnés, taux de signature"><img data-src="tf-h-devisd.webp" width="1449" height="840" alt="Un devis gagné avec son cycle de vie et le bouton Convertir en facture"><img data-src="tf-h-clients.webp" width="1449" height="840" alt="La liste des clients : chiffre d'affaires, reste à encaisser, statut de paiement"><img data-src="tf-h-paiements.webp" width="1449" height="840" alt="Les paiements : total encaissé, en attente, montant restant dû"><img data-src="tf-h-dash.webp" width="1449" height="840" alt="Le tableau de bord : interventions sur 7 jours, répartition par nuisible, taux d'acceptation"><div class="vprog"><b id="vp"></b></div></div>
+    <p class="vhint">Choisissez l'écran à voir</p>
+      <div class="vtabs" role="tablist" aria-label="Écrans du logiciel"><button type="button" role="tab" aria-selected="true" data-i="0">Calendrier</button><button type="button" role="tab" aria-selected="false" data-i="1">Devis</button><button type="button" role="tab" aria-selected="false" data-i="2">Fiche devis</button><button type="button" role="tab" aria-selected="false" data-i="3">Clients</button><button type="button" role="tab" aria-selected="false" data-i="4">Paiements</button><button type="button" role="tab" aria-selected="false" data-i="5">Tableau de bord</button></div>
+      <figure class="frame" id="viewer">
+        <div class="bar"><i></i><i></i><i></i><span id="vtitle">TigerFlow · Calendrier</span></div>
+        <div class="vstage"><img class="on" fetchpriority="high" src="tf-cal.webp" width="1449" height="840" alt="Le calendrier de TigerFlow : une colonne par technicien, les interventions de la journée classées par code postal et par nuisible"><img data-src="tf-h-devis.webp" width="1449" height="840" alt="La liste des devis : en attente, expirant bientôt, gagnés, taux de signature"><img data-src="tf-h-devisd.webp" width="1449" height="840" alt="Un devis gagné avec son cycle de vie et le bouton Convertir en facture"><img data-src="tf-h-clients.webp" width="1449" height="840" alt="La liste des clients : chiffre d'affaires, reste à encaisser, statut de paiement"><img data-src="tf-h-paiements.webp" width="1449" height="840" alt="Les paiements : total encaissé, en attente, montant restant dû"><img data-src="tf-h-dash.webp" width="1449" height="840" alt="Le tableau de bord : interventions sur 7 jours, répartition par nuisible, taux d'acceptation"><div class="vprog"><b id="vp"></b></div><button type="button" class="varr l" id="vprev" aria-label="Écran précédent"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><path d="M15 6l-6 6 6 6"/></svg></button><button type="button" class="varr r" id="vnext" aria-label="Écran suivant"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><path d="M9 6l6 6-6 6"/></svg></button></div>
       </figure>
     </div>
   </div>
@@ -1041,13 +1045,14 @@ summary:hover{color:var(--o)}
 
 
   /* === VISIONNEUSE DU HERO : onglets + défilement automatique jusqu'au premier clic === */
-  var vw=document.getElementById('viewer'),vb=[].slice.call(vw.querySelectorAll('.vtabs button')),vi=[].slice.call(vw.querySelectorAll('.vstage img')),vp=document.getElementById('vp'),vc=0,vt=null,vauto=!matchMedia('(prefers-reduced-motion: reduce)').matches,VD=4500;
+  var vw=document.getElementById('viewer'),vb=[].slice.call(document.querySelectorAll('.vtabs button')),vi=[].slice.call(vw.querySelectorAll('.vstage img')),vp=document.getElementById('vp'),vc=0,vt=null,vauto=!matchMedia('(prefers-reduced-motion: reduce)').matches,VD=4500;
   function vload(i){var im=vi[i];if(im&&im.dataset.src){im.src=im.dataset.src;delete im.dataset.src}}
   function vgo(i){
     vc=i;vload(i);vload((i+1)%vi.length);
     vi.forEach(function(im,k){im.classList.toggle('on',k===i)});
     vb.forEach(function(b,k){b.setAttribute('aria-selected',k===i)});
-    var b=vb[i],tb=b.parentNode;tb.scrollTo({left:b.offsetLeft-tb.offsetLeft-20,behavior:'smooth'});
+    document.getElementById('vtitle').textContent='TigerFlow · '+vb[i].textContent;
+    var b=vb[i],tb=b.parentNode;if(tb.scrollWidth>tb.clientWidth)tb.scrollTo({left:b.offsetLeft-tb.offsetLeft-24,behavior:'smooth'});
   }
   function vrun(){
     clearTimeout(vt);if(!vauto){vp.style.transition='none';vp.style.width='0';return}
@@ -1055,6 +1060,8 @@ summary:hover{color:var(--o)}
     vt=setTimeout(function(){vgo((vc+1)%vi.length);vrun()},VD);
   }
   vb.forEach(function(b,k){b.addEventListener('click',function(){vauto=false;vgo(k);vrun()})});
+  document.getElementById('vprev').addEventListener('click',function(){vauto=false;vgo((vc-1+vi.length)%vi.length);vrun()});
+  document.getElementById('vnext').addEventListener('click',function(){vauto=false;vgo((vc+1)%vi.length);vrun()});
   vw.addEventListener('mouseenter',function(){clearTimeout(vt);vp.style.transition='none';vp.style.width='0'});
   vw.addEventListener('mouseleave',function(){vrun()});
   setTimeout(function(){vload(1);vrun()},3200);
