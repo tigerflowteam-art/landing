@@ -391,6 +391,22 @@ footer nav a:hover{color:var(--o)}
 @media(max-width:480px){.signs{height:420px}.doc{width:86%;padding:18px}}
 @media(prefers-reduced-motion:reduce){.js .signs .box path{stroke-dashoffset:0;transition:none}.js .signs .st{opacity:1;transform:none;transition:none}}
 
+/* ---------- visionneuse du hero ---------- */
+.frame .bar{height:auto;min-height:46px;padding:7px 14px;gap:7px}
+.vtabs{display:flex;gap:4px;margin-left:12px;overflow-x:auto;scrollbar-width:none;flex:1}
+.vtabs::-webkit-scrollbar{display:none}
+.vtabs button{flex:none;font:600 .82rem/1 Inter,sans-serif;color:var(--mut);background:none;border:1px solid transparent;border-radius:8px;padding:9px 12px;cursor:pointer;white-space:nowrap;transition:background .2s,color .2s}
+.vtabs button:hover{color:var(--ink);background:#E7E9EE}
+.vtabs button[aria-selected=true]{background:#fff;color:var(--ink);border-color:var(--line);box-shadow:0 1px 2px rgba(16,18,22,.08)}
+.vtabs button[aria-selected=true]::before{content:"";display:inline-block;width:7px;height:7px;border-radius:50%;background:var(--o);margin-right:7px;vertical-align:1px}
+.vstage{position:relative;aspect-ratio:1449/840;background:#fff;overflow:hidden}
+.vstage img{position:absolute;inset:0;width:100%;height:100%;opacity:0;transform:scale(1.025);transition:opacity .45s ease,transform .7s cubic-bezier(.2,.7,.2,1)}
+.vstage img.on{opacity:1;transform:none}
+.vprog{position:absolute;left:0;right:0;bottom:0;height:3px;background:rgba(16,18,22,.06)}
+.vprog b{display:block;height:100%;width:0;background:var(--o)}
+@media(max-width:600px){.frame .bar>i{display:none}.vtabs{margin-left:0}.vtabs button{padding:8px 10px;font-size:.78rem}}
+@media(prefers-reduced-motion:reduce){.vstage img{transition:none;transform:none}}
+
 /* ---------- animations ---------- */
 .js .rv{opacity:0;transform:translateY(26px);transition:opacity .7s cubic-bezier(.2,.7,.2,1),transform .7s cubic-bezier(.2,.7,.2,1);will-change:opacity,transform}
 .js .rv.rv-l{transform:translateX(-44px)}
@@ -488,8 +504,8 @@ summary:hover{color:var(--o)}
 @keyframes ring{0%{box-shadow:0 10px 24px -10px rgba(255,90,31,.7),0 0 0 0 rgba(255,90,31,.55)}60%,100%{box-shadow:0 10px 24px -10px rgba(255,90,31,.7),0 0 0 18px rgba(255,90,31,0)}}
 .js .hero .cta .btn-o{animation:ring 2.6s ease-out 2.6s 3}
 @keyframes sheen{to{transform:translateX(110%)}}
-.hero .frame::after{content:"";position:absolute;inset:0;background:linear-gradient(105deg,rgba(255,255,255,0) 38%,rgba(255,255,255,.6) 50%,rgba(255,255,255,0) 62%);transform:translateX(-110%);pointer-events:none}
-.js .hero .frame::after{animation:sheen 1.5s ease 2.3s both}
+.hero .vstage::after{content:"";position:absolute;inset:0;background:linear-gradient(105deg,rgba(255,255,255,0) 38%,rgba(255,255,255,.6) 50%,rgba(255,255,255,0) 62%);transform:translateX(-110%);pointer-events:none}
+.js .hero .vstage::after{animation:sheen 1.5s ease 2.3s both}
 .js .hero::before{animation:glow 7s ease-in-out infinite}
 .js .ba s{text-decoration:none;background:linear-gradient(currentColor,currentColor) 0 56%/0 1.5px no-repeat;transition:background-size .8s ease .55s}
 .js .ba.seen s{background-size:100% 1.5px}
@@ -531,7 +547,7 @@ summary:hover{color:var(--o)}
 .mod,.plan,.card,.pay{--mx:-500px;--my:-500px;background-image:radial-gradient(280px circle at var(--mx) var(--my),rgba(255,90,31,.14),rgba(255,90,31,0) 65%)}
 @media(prefers-reduced-motion:reduce){
   .js .spl .w2>span,.js .pay .pi,.js .pay .how span,.js .cmp tbody tr .tf::before,.js .dates li .dt,.js .efact .dates::before{transform:none;opacity:1;transition:none}
-  .js .hero .cta .btn-o,.js .hero .frame::after,.js .hero::before,.phones.float img,.app::before,.final{animation:none}
+  .js .hero .cta .btn-o,.js .hero .vstage::after,.js .hero::before,.phones.float img,.app::before,.final{animation:none}
   .js .ba s{background-size:100% 1.5px;transition:none}.js .ba .ap{opacity:1;transform:none;transition:none}
   .js .clock .hh{transform:rotate(180deg);transition:none}.js .clock .mh{transform:rotate(0deg);transition:none}
 }
@@ -579,9 +595,9 @@ summary:hover{color:var(--o)}
       <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg> On importe vos clients pour vous</li>
     </ul>
     <div class="hero-shot">
-    <figure class="frame">
-        <div class="bar"><i></i><i></i><i></i><span>TigerFlow · Calendrier</span></div>
-        <img fetchpriority="high" src="tf-cal.webp" width="1449" height="840" alt="Le calendrier de TigerFlow : une colonne par technicien, les interventions de la journée classées par code postal et par nuisible">
+    <figure class="frame" id="viewer">
+        <div class="bar"><i></i><i></i><i></i><div class="vtabs" role="tablist" aria-label="Écrans du logiciel"><button type="button" role="tab" aria-selected="true" data-i="0">Calendrier</button><button type="button" role="tab" aria-selected="false" data-i="1">Devis</button><button type="button" role="tab" aria-selected="false" data-i="2">Fiche devis</button><button type="button" role="tab" aria-selected="false" data-i="3">Clients</button><button type="button" role="tab" aria-selected="false" data-i="4">Paiements</button><button type="button" role="tab" aria-selected="false" data-i="5">Tableau de bord</button></div></div>
+        <div class="vstage"><img class="on" fetchpriority="high" src="tf-cal.webp" width="1449" height="840" alt="Le calendrier de TigerFlow : une colonne par technicien, les interventions de la journée classées par code postal et par nuisible"><img data-src="tf-h-devis.webp" width="1449" height="840" alt="La liste des devis : en attente, expirant bientôt, gagnés, taux de signature"><img data-src="tf-h-devisd.webp" width="1449" height="840" alt="Un devis gagné avec son cycle de vie et le bouton Convertir en facture"><img data-src="tf-h-clients.webp" width="1449" height="840" alt="La liste des clients : chiffre d'affaires, reste à encaisser, statut de paiement"><img data-src="tf-h-paiements.webp" width="1449" height="840" alt="Les paiements : total encaissé, en attente, montant restant dû"><img data-src="tf-h-dash.webp" width="1449" height="840" alt="Le tableau de bord : interventions sur 7 jours, répartition par nuisible, taux d'acceptation"><div class="vprog"><b id="vp"></b></div></div>
       </figure>
     </div>
   </div>
@@ -1023,6 +1039,25 @@ summary:hover{color:var(--o)}
   }
   bm.addEventListener('click',function(){bill(false)});ba.addEventListener('click',function(){bill(true)});
 
+
+  /* === VISIONNEUSE DU HERO : onglets + défilement automatique jusqu'au premier clic === */
+  var vw=document.getElementById('viewer'),vb=[].slice.call(vw.querySelectorAll('.vtabs button')),vi=[].slice.call(vw.querySelectorAll('.vstage img')),vp=document.getElementById('vp'),vc=0,vt=null,vauto=!matchMedia('(prefers-reduced-motion: reduce)').matches,VD=4500;
+  function vload(i){var im=vi[i];if(im&&im.dataset.src){im.src=im.dataset.src;delete im.dataset.src}}
+  function vgo(i){
+    vc=i;vload(i);vload((i+1)%vi.length);
+    vi.forEach(function(im,k){im.classList.toggle('on',k===i)});
+    vb.forEach(function(b,k){b.setAttribute('aria-selected',k===i)});
+    var b=vb[i],tb=b.parentNode;tb.scrollTo({left:b.offsetLeft-tb.offsetLeft-20,behavior:'smooth'});
+  }
+  function vrun(){
+    clearTimeout(vt);if(!vauto){vp.style.transition='none';vp.style.width='0';return}
+    vp.style.transition='none';vp.style.width='0';void vp.offsetWidth;vp.style.transition='width '+VD+'ms linear';vp.style.width='100%';
+    vt=setTimeout(function(){vgo((vc+1)%vi.length);vrun()},VD);
+  }
+  vb.forEach(function(b,k){b.addEventListener('click',function(){vauto=false;vgo(k);vrun()})});
+  vw.addEventListener('mouseenter',function(){clearTimeout(vt);vp.style.transition='none';vp.style.width='0'});
+  vw.addEventListener('mouseleave',function(){vrun()});
+  setTimeout(function(){vload(1);vrun()},3200);
 
   /* === ENVOI DES DEMANDES (rappel + bulle) ===
      Les demandes partent par e-mail vers LEAD_EMAIL via le service FormSubmit.
