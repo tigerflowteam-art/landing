@@ -274,6 +274,18 @@ footer nav a:hover{color:var(--o)}
 .pref svg{width:18px;height:18px;color:#1FAF5A}
 .pref input:checked+span{border-color:var(--o);background:var(--o-l);color:var(--ink);box-shadow:0 0 0 1px var(--o)}
 .pref input:focus-visible+span{outline:2px solid var(--o);outline-offset:2px}
+.stp{display:flex;align-items:center;justify-content:space-between;gap:14px}
+.call .stp label{display:block;font:600 .84rem/1.3 Inter,sans-serif;color:var(--ink)}
+.stp label em{font-style:normal;font-weight:400;color:var(--mut)}
+.stp-c{display:flex;align-items:center;border:1px solid #D5D8DF;border-radius:10px;overflow:hidden;flex:none;background:#fff}
+.stp-c button{width:46px;height:46px;border:0;background:var(--bg);color:var(--ink);font:600 1.3rem/1 Inter,sans-serif;cursor:pointer;transition:background .15s,color .15s}
+.stp-c button:hover{background:var(--o);color:#fff}
+.call .stp-c input{width:58px;height:46px;border:0;border-radius:0;padding:0;text-align:center;font:700 1.1rem/1 Sora,sans-serif;-moz-appearance:textfield}
+.call .stp-c input:focus{outline:0}
+@media(max-width:480px){.stp label em{display:none}.stp-c button{width:42px}.call .stp-c input{width:48px}}
+@media(hover:none){.stp-c button:hover{background:var(--bg);color:var(--ink)}}
+.stp-c:focus-within{border-color:var(--o);box-shadow:0 0 0 1px var(--o)}
+.stp-c input::-webkit-outer-spin-button,.stp-c input::-webkit-inner-spin-button{-webkit-appearance:none;margin:0}
 .btn.wa{background:#1FAF5A;color:#fff;width:100%}
 .btn.wa:hover{background:#178F49}
 .btn.wa[hidden]{display:none}
@@ -852,6 +864,14 @@ summary:hover{color:var(--o)}
         <label>Votre prénom<input name="prenom" autocomplete="given-name" required></label>
         <label>Votre société<input name="societe" autocomplete="organization"></label>
         <label>Votre téléphone<input name="telephone" type="tel" inputmode="tel" autocomplete="tel" placeholder="06 12 34 56 78" required></label>
+        <div class="stp">
+          <label for="nbt">Nombre de techniciens <em>(facultatif)</em></label>
+          <div class="stp-c">
+            <button type="button" id="nbm" aria-label="Un technicien de moins">−</button>
+            <input id="nbt" name="techniciens" type="number" inputmode="numeric" min="1" max="200" placeholder="—">
+            <button type="button" id="nbp" aria-label="Un technicien de plus">+</button>
+          </div>
+        </div>
         <fieldset class="pref">
           <legend>Je préfère être contacté par</legend>
           <label><input type="radio" name="canal" value="Téléphone" checked><span>Téléphone</span></label>
@@ -1002,6 +1022,11 @@ summary:hover{color:var(--o)}
     });
   }
 
+  var nbt=document.getElementById('nbt');
+  function stepN(k){var v=parseInt(nbt.value,10);v=isNaN(v)?(k>0?1:0):v+k;nbt.value=v<1?'':Math.min(200,v)}
+  document.getElementById('nbm').addEventListener('click',function(){stepN(-1)});
+  document.getElementById('nbp').addEventListener('click',function(){stepN(1)});
+
   var cb=document.getElementById('cb'),cbm=document.getElementById('cbm');
   cb.addEventListener('submit',function(e){
     e.preventDefault();
@@ -1009,7 +1034,7 @@ summary:hover{color:var(--o)}
     cbm.className='msg ko';
     if(d.get('site_web'))return;
     if(!d.get('prenom')||tel.length<10){cbm.textContent='Indiquez votre prénom et un numéro de téléphone valide.';return}
-    sendLead({_subject:'Landing TigerFlow — demande de rappel ('+d.get('prenom')+')',Type:'Demande de rappel','Prénom':d.get('prenom'),'Société':d.get('societe')||'—','Téléphone':tel,'Contact préféré':d.get('canal')},cb,cbm,"C'est noté, on vous recontacte dans la journée.");
+    sendLead({_subject:'Landing TigerFlow — demande de rappel ('+d.get('prenom')+')',Type:'Demande de rappel','Prénom':d.get('prenom'),'Société':d.get('societe')||'—','Téléphone':tel,'Techniciens':d.get('techniciens')||'non précisé','Contact préféré':d.get('canal')},cb,cbm,"C'est noté, on vous recontacte dans la journée.");
   });
 
   /* === BULLE "UNE QUESTION ?" === */
