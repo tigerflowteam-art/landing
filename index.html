@@ -19,7 +19,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Sora:wght@600;700;800&display=swap" rel="stylesheet">
-<script type="application/ld+json">[{"@context": "https://schema.org", "@type": "SoftwareApplication", "name": "TigerFlow", "applicationCategory": "BusinessApplication", "operatingSystem": "Web, iOS, Android", "description": "Logiciel de gestion pour les entreprises antinuisibles : planning, techniciens, devis, factures et encaissement.", "inLanguage": "fr", "offers": [{"@type": "Offer", "name": "Gratuit", "price": "0", "priceCurrency": "EUR"}, {"@type": "Offer", "name": "Équipe", "price": "39", "priceCurrency": "EUR", "description": "HT par utilisateur et par mois"}, {"@type": "Offer", "name": "Pro", "price": "49", "priceCurrency": "EUR", "description": "HT par utilisateur et par mois"}]}, {"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "Je dois donner ma carte pour l'essai ?", "acceptedAnswer": {"@type": "Answer", "text": "Non. 14 jours d'essai sans carte bancaire. À la fin, vous décidez."}}, {"@type": "Question", "name": "J'ai 800 clients dans Excel, je fais comment ?", "acceptedAnswer": {"@type": "Answer", "text": "Vous nous envoyez le fichier, on l'importe pour vous, gratuitement, sous 24 h. Zéro ligne à ressaisir."}}, {"@type": "Question", "name": "Mes techniciens ne sont pas à l'aise avec les logiciels.", "acceptedAnswer": {"@type": "Answer", "text": "L'appli technicien a trois boutons : ma journée, mon intervention, mon rapport. S'ils savent envoyer un SMS, ils savent utiliser TigerFlow."}}, {"@type": "Question", "name": "Est-ce que ça gère les contrats annuels avec les syndics ?", "acceptedAnswer": {"@type": "Answer", "text": "Oui. Un contrat, ce sont des passages planifiés d'avance et des factures qui partent à la bonne date, sans y penser."}}, {"@type": "Question", "name": "Et si j'arrête ?", "acceptedAnswer": {"@type": "Answer", "text": "Vous résiliez quand vous voulez depuis votre espace, et vous récupérez toutes vos données."}}, {"@type": "Question", "name": "Où sont stockées mes données ?", "acceptedAnswer": {"@type": "Answer", "text": "En Europe, chez Amazon Web Services. Elles sont sauvegardées chaque jour."}}]}]</script>
+<script type="application/ld+json">[{"@context": "https://schema.org", "@type": "SoftwareApplication", "name": "TigerFlow", "applicationCategory": "BusinessApplication", "operatingSystem": "Web, iOS, Android", "description": "Logiciel de gestion pour les entreprises antinuisibles : planning, techniciens, devis, factures et encaissement.", "inLanguage": "fr", "offers": [{"@type": "Offer", "name": "Gratuit", "price": "0", "priceCurrency": "EUR"}, {"@type": "Offer", "name": "Équipe", "price": "39", "priceCurrency": "EUR", "description": "HT par utilisateur et par mois"}, {"@type": "Offer", "name": "Pro", "price": "49", "priceCurrency": "EUR", "description": "HT par utilisateur et par mois"}]}, {"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "Je dois donner ma carte pour l'essai ?", "acceptedAnswer": {"@type": "Answer", "text": "Non. 14 jours d'essai sans carte bancaire. À la fin, vous décidez."}}, {"@type": "Question", "name": "J'ai 800 clients dans Excel, je fais comment ?", "acceptedAnswer": {"@type": "Answer", "text": "Vous nous envoyez le fichier, on l'importe pour vous, gratuitement, sous 24 h. Zéro ligne à ressaisir."}}, {"@type": "Question", "name": "Mes techniciens ne sont pas à l'aise avec les logiciels.", "acceptedAnswer": {"@type": "Answer", "text": "L'appli technicien a trois boutons : ma journée, mon intervention, mon rapport. S'ils savent envoyer un SMS, ils savent utiliser TigerFlow."}}, {"@type": "Question", "name": "Et si j'arrête ?", "acceptedAnswer": {"@type": "Answer", "text": "Vous résiliez quand vous voulez depuis votre espace, et vous récupérez toutes vos données."}}, {"@type": "Question", "name": "Où sont stockées mes données ?", "acceptedAnswer": {"@type": "Answer", "text": "En Europe, chez Amazon Web Services. Elles sont sauvegardées chaque jour."}}]}]</script>
 <script>document.documentElement.className="js"</script>
 <style>
 :root{
@@ -410,10 +410,63 @@ footer nav a:hover{color:var(--o)}
 .vprog b{display:block;height:100%;width:0;background:var(--o)}
 @media(prefers-reduced-motion:reduce){.vstage img{transition:none;transform:none}}
 
+/* ---------- ergonomie ---------- */
+.burger{display:none;width:44px;height:44px;border:1px solid var(--line);border-radius:10px;background:#fff;cursor:pointer;padding:0;place-items:center;align-content:center;gap:5px}
+.burger i{display:block;width:18px;height:2px;border-radius:2px;background:var(--ink);transition:transform .2s,opacity .2s}
+.burger[aria-expanded=true] i:nth-child(1){transform:translateY(7px) rotate(45deg)}
+.burger[aria-expanded=true] i:nth-child(2){opacity:0}
+.burger[aria-expanded=true] i:nth-child(3){transform:translateY(-7px) rotate(-45deg)}
+.mnav{border-top:1px solid var(--line);background:#fff;padding:8px 24px 16px;box-shadow:0 24px 40px -24px rgba(16,18,22,.35)}
+.mnav[hidden]{display:none}
+.mnav a{display:block;padding:15px 4px;font:600 1.02rem/1 Inter,sans-serif;color:var(--ink);border-bottom:1px solid var(--line)}
+.mnav a:last-child{border-bottom:0}
+@media(max-width:860px){.burger{display:grid}.nav nav{gap:10px}}
+@media(min-width:861px){.mnav{display:none!important}}
+.zoomable{cursor:zoom-in}
+.lb{position:fixed;inset:0;z-index:100;background:rgba(16,18,22,.94);display:flex;flex-direction:column}
+.lb[hidden]{display:none}
+.lb-s{flex:1;overflow:auto;-webkit-overflow-scrolling:touch;display:flex;align-items:center;padding:64px 16px 8px}
+.lb-s img{display:block;margin:0 auto;border-radius:10px;max-width:none;width:min(1456px,96vw);height:auto;box-shadow:0 30px 80px rgba(0,0,0,.6)}
+.lb-x{position:absolute;right:14px;top:12px;width:44px;height:44px;border-radius:50%;border:0;background:#fff;color:var(--ink);font-size:1.6rem;line-height:1;cursor:pointer;z-index:2}
+.lb-h{display:none;text-align:center;color:#B6BBC6;font-size:.84rem;padding:10px 16px calc(14px + env(safe-area-inset-bottom))}
+@media(max-width:900px){.lb-s{align-items:flex-start}.lb-s img{width:1100px;margin:0}.lb-h{display:block}}
+.fdone{display:grid;gap:14px;text-align:center;justify-items:center;padding:8px 0}
+.fdone[hidden]{display:none}
+.fdone-i{width:60px;height:60px;border-radius:50%;background:#DCFAE6;color:#067647;display:grid;place-items:center}
+.fdone-i svg{width:30px;height:30px}
+.fdone p{font-size:.98rem}
+.fdone b{color:var(--ink);white-space:nowrap}
+.fdone:focus{outline:0}
+.team{display:inline-flex;align-items:center;gap:16px;margin-top:28px;background:#fff;border:1px solid var(--line);border-radius:14px;padding:10px 10px 10px 20px;box-shadow:0 1px 2px rgba(16,18,22,.05)}
+.team label{font:600 1rem/1 Inter,sans-serif;color:var(--ink);white-space:nowrap}
+@media(max-width:420px){.team{gap:10px;padding-left:14px}.team label{font-size:.92rem}}
+.team .stp-c input{width:58px;height:46px;border:0;text-align:center;font:700 1.15rem/1 Sora,sans-serif;color:var(--ink);-moz-appearance:textfield;background:#fff}
+.team .stp-c input:focus{outline:0}
+.team+.toggle{margin-top:16px;display:flex;width:max-content;margin-left:auto;margin-right:auto}
+.tot{margin-top:14px;font-size:.92rem;color:var(--txt);background:var(--bg);border-radius:10px;padding:11px 12px;line-height:1.35}
+.tot b{color:var(--ink)}
+.plan.best .tot{background:var(--o-l)}
+.price small{min-height:0!important}
+@media(max-width:700px){
+  .cmp-wrap{border:0;overflow:visible}
+  .cmp{min-width:0;display:block}
+  .cmp thead{display:none}
+  .cmp tbody{display:grid;gap:14px}
+  .cmp tbody tr{display:block;border:1px solid var(--line);border-radius:16px;overflow:hidden;background:#fff}
+  .cmp tbody td{display:flex;justify-content:space-between;gap:14px;align-items:baseline;width:auto!important;padding:11px 16px;border-bottom:1px solid var(--line);text-align:right}
+  .cmp tbody td:first-child{display:block;text-align:left;font:700 1rem/1.3 Sora,sans-serif;background:var(--bg)}
+  .cmp tbody td:last-child{border-bottom:0}
+  .cmp tbody td:nth-child(n+2)::before{flex:none;text-align:left;font:600 .78rem/1.3 Inter,sans-serif;color:var(--mut)}
+  .cmp tbody td:nth-child(2)::before{content:"Excel + papier"}
+  .cmp tbody td:nth-child(3)::before{content:"Logiciel généraliste"}
+  .cmp tbody .tf{padding-left:16px}
+  .cmp tbody .tf::before{content:"TigerFlow";position:static;width:auto;height:auto;margin:0;border-radius:0;background:none;color:var(--o)!important;transform:none!important}
+}
+
 /* ---------- animations ---------- */
-.js .rv{opacity:0;transform:translateY(26px);transition:opacity .7s cubic-bezier(.2,.7,.2,1),transform .7s cubic-bezier(.2,.7,.2,1);will-change:opacity,transform}
-.js .rv.rv-l{transform:translateX(-44px)}
-.js .rv.rv-r{transform:translateX(44px)}
+.js .rv{opacity:0;transform:translateY(14px);transition:opacity .38s cubic-bezier(.2,.7,.2,1),transform .38s cubic-bezier(.2,.7,.2,1);will-change:opacity,transform}
+.js .rv.rv-l{transform:translateX(-22px)}
+.js .rv.rv-r{transform:translateX(22px)}
 .js .rv.rv-z{transform:translateY(34px) scale(.94)}
 @media(max-width:900px){.js .rv.rv-l,.js .rv.rv-r{transform:translateY(26px)}}
 main{overflow-x:clip}
@@ -425,8 +478,8 @@ main{overflow-x:clip}
 @keyframes bump{0%{transform:scale(1)}40%{transform:scale(1.06)}100%{transform:scale(1)}}
 @keyframes shine{from{transform:translateX(-120%) skewX(-20deg)}to{transform:translateX(320%) skewX(-20deg)}}
 .js .hero .eyebrow,.js .hero .sub,.js .hero .cta,.js .hero .ticks,.js .hero .vtabs{animation:fadeUp .8s cubic-bezier(.2,.7,.2,1) both}
-.js .hero .sub{animation-delay:.55s}.js .hero .cta{animation-delay:.7s}.js .hero .ticks{animation-delay:.85s}.js .hero .vtabs{animation-delay:1s}
-.js .hero .frame{animation:frameIn 1.1s cubic-bezier(.2,.7,.2,1) .9s both;transform-origin:50% 0;will-change:transform}
+.js .hero .sub{animation-delay:.25s}.js .hero .cta{animation-delay:.35s}.js .hero .ticks{animation-delay:.45s}.js .hero .vtabs{animation-delay:.55s}
+.js .hero .frame{animation:frameIn .7s cubic-bezier(.2,.7,.2,1) .55s both;transform-origin:50% 0;will-change:transform}
 .hero{position:relative;overflow-x:clip}
 .hero::before{content:"";position:absolute;left:50%;top:-180px;width:900px;height:520px;margin-left:-450px;background:radial-gradient(closest-side,rgba(255,90,31,.18),rgba(255,90,31,0));pointer-events:none}
 .hero .w{position:relative}
@@ -460,12 +513,12 @@ summary:hover{color:var(--o)}
 .wd{display:inline-block;overflow:hidden;vertical-align:top;padding:.1em 0 .14em;margin:-.1em 0 -.14em}
 .wd>span{display:inline-block}
 @keyframes wordUp{from{transform:translateY(120%) rotate(4deg)}to{transform:none}}
-.js .wd>span{animation:wordUp .95s cubic-bezier(.2,.8,.2,1) both;animation-delay:calc(var(--i)*95ms + 80ms)}
+.js .wd>span{animation:wordUp .55s cubic-bezier(.2,.8,.2,1) both;animation-delay:calc(var(--i)*55ms + 40ms)}
 .roll{display:inline-block;height:1.12em;line-height:1.12em;overflow:hidden;vertical-align:top}
 .roll .strip{display:block;transform:translateY(-80%)}
 .roll i{display:block;height:1.12em;font-style:normal}
 @keyframes roll{from{transform:translateY(0)}to{transform:translateY(-80%)}}
-.js .roll .strip{animation:roll 1.7s cubic-bezier(.65,0,.15,1) .95s both}
+.js .roll .strip{animation:roll 1.1s cubic-bezier(.65,0,.15,1) .5s both}
 
 .stagecol,.rail{display:none}
 @media(min-width:960px){
@@ -502,17 +555,17 @@ summary:hover{color:var(--o)}
 /* ---------- animations v3 ---------- */
 .w2{display:inline-block;overflow:hidden;vertical-align:top;padding:.1em 0 .18em;margin:-.1em 0 -.18em}
 .w2>span{display:inline-block}
-.js .spl .w2>span{transform:translateY(120%) rotate(5deg);transition:transform .85s cubic-bezier(.2,.8,.2,1);transition-delay:calc(var(--i)*40ms)}
+.js .spl .w2>span{transform:translateY(120%) rotate(5deg);transition:transform .45s cubic-bezier(.2,.8,.2,1);transition-delay:calc(var(--i)*18ms)}
 .js .spl.seen .w2>span{transform:none}
 @keyframes ring{0%{box-shadow:0 10px 24px -10px rgba(255,90,31,.7),0 0 0 0 rgba(255,90,31,.55)}60%,100%{box-shadow:0 10px 24px -10px rgba(255,90,31,.7),0 0 0 18px rgba(255,90,31,0)}}
-.js .hero .cta .btn-o{animation:ring 2.6s ease-out 2.6s 3}
+.js .hero .cta .btn-o{animation:ring 2.6s ease-out 1.8s 3}
 @keyframes sheen{to{transform:translateX(110%)}}
 .hero .vstage::after{content:"";position:absolute;inset:0;background:linear-gradient(105deg,rgba(255,255,255,0) 38%,rgba(255,255,255,.6) 50%,rgba(255,255,255,0) 62%);transform:translateX(-110%);pointer-events:none}
-.js .hero .vstage::after{animation:sheen 1.5s ease 2.3s both}
+.js .hero .vstage::after{animation:sheen 1.1s ease 1.4s both}
 .js .hero::before{animation:glow 7s ease-in-out infinite}
-.js .ba s{text-decoration:none;background:linear-gradient(currentColor,currentColor) 0 56%/0 1.5px no-repeat;transition:background-size .8s ease .55s}
+.js .ba s{text-decoration:none;background:linear-gradient(currentColor,currentColor) 0 56%/0 1.5px no-repeat;transition:background-size .45s ease .2s}
 .js .ba.seen s{background-size:100% 1.5px}
-.js .ba .ap{opacity:0;transform:translateY(14px);transition:opacity .5s ease 1.25s,transform .6s cubic-bezier(.2,.8,.2,1) 1.25s}
+.js .ba .ap{opacity:0;transform:translateY(14px);transition:opacity .35s ease .6s,transform .4s cubic-bezier(.2,.8,.2,1) .6s}
 .js .ba.seen .ap{opacity:1;transform:none}
 .js .pay .pi{transform:scale(0) rotate(-25deg);transition:transform .65s cubic-bezier(.2,1.7,.4,1) .3s}
 .js .pay.seen .pi{transform:none}
@@ -578,7 +631,17 @@ summary:hover{color:var(--o)}
       <a href="#faq">FAQ</a>
       <a href="https://tigerseo13-del.github.io/sastigerflow/connexion.html">Se connecter</a>
       <a class="btn btn-k" href="https://tigerseo13-del.github.io/sastigerflow/inscription.html">Essai gratuit</a>
+      <button type="button" class="burger" id="burger" aria-label="Ouvrir le menu" aria-expanded="false" aria-controls="mnav"><i></i><i></i><i></i></button>
     </nav>
+  </div>
+  <div class="mnav" id="mnav" hidden>
+    <a href="#produit">Le logiciel</a>
+    <a href="#appli">L'appli technicien</a>
+    <a href="#encaissement">L'encaissement</a>
+    <a href="#prix">Prix</a>
+    <a href="#rappel">Être rappelé</a>
+    <a href="#faq">Questions fréquentes</a>
+    <a href="https://tigerseo13-del.github.io/sastigerflow/connexion.html">Se connecter</a>
   </div>
 </header>
 
@@ -788,6 +851,14 @@ summary:hover{color:var(--o)}
   <div class="w" style="text-align:center">
     <p class="eyebrow">Prix</p>
     <h2>Choisissez votre formule</h2>
+    <div class="team">
+      <label for="tn">Combien êtes-vous ?</label>
+      <div class="stp-c">
+        <button type="button" id="tnm" aria-label="Une personne de moins">−</button>
+        <input id="tn" type="number" inputmode="numeric" min="1" max="99" value="3" aria-label="Nombre d'utilisateurs">
+        <button type="button" id="tnp" aria-label="Une personne de plus">+</button>
+      </div>
+    </div>
     <div class="toggle" role="group" aria-label="Période de facturation">
       <button type="button" id="bm" aria-pressed="true">Mensuel</button>
       <button type="button" id="ba" aria-pressed="false">Annuel <small>· 1 mois offert</small></button>
@@ -797,6 +868,7 @@ summary:hover{color:var(--o)}
         <h3>Gratuit</h3>
         <p class="who">Pour démarrer seul, sans rien payer.</p>
         <div class="price">0 €<small>pour toujours</small></div>
+        <p class="tot free">Pour 1 personne</p>
         <ul>
           <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg> 1 personne</li>
           <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg> 30 documents par mois</li>
@@ -807,7 +879,8 @@ summary:hover{color:var(--o)}
       <div class="plan">
         <h3>Équipe</h3>
         <p class="who">Pour mettre vos techniciens sur l'appli.</p>
-        <div class="price"><span data-m="39 €" data-a="35,75 €">39 €</span><small data-m="HT par utilisateur et par mois" data-a="HT par utilisateur et par mois, soit 429 € par an">HT par utilisateur et par mois</small></div>
+        <div class="price"><span data-m="39 €" data-a="429 €">39 €</span><small data-m="HT par utilisateur et par mois" data-a="HT par utilisateur et par an (1 mois offert)">HT par utilisateur et par mois</small></div>
+        <p class="tot" data-pm="39" data-pa="429"></p>
         <ul>
           <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg> Appli mobile technicien</li>
           <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg> 20 SMS par mois</li>
@@ -819,7 +892,8 @@ summary:hover{color:var(--o)}
         <span class="tag">Conseillé</span>
         <h3>Pro</h3>
         <p class="who">Pour encaisser sur place et ne plus courir après les impayés.</p>
-        <div class="price"><span data-m="49 €" data-a="44,92 €">49 €</span><small data-m="HT par utilisateur et par mois" data-a="HT par utilisateur et par mois, soit 539 € par an">HT par utilisateur et par mois</small></div>
+        <div class="price"><span data-m="49 €" data-a="539 €">49 €</span><small data-m="HT par utilisateur et par mois" data-a="HT par utilisateur et par an (1 mois offert)">HT par utilisateur et par mois</small></div>
+        <p class="tot" data-pm="49" data-pa="539"></p>
         <ul>
           <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg> Tout Équipe</li>
           <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg> Encaissement sur place par carte (Stripe)</li>
@@ -927,6 +1001,13 @@ summary:hover{color:var(--o)}
         </div>
         <a class="btn wa" id="wa1" target="_blank" rel="noopener" hidden>Écrire sur WhatsApp</a>
         <p class="msg" id="cbm" role="status"></p>
+        <div class="fdone" id="fdone" hidden tabindex="-1">
+          <span class="fdone-i"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg></span>
+          <p class="fst">C'est noté, <span id="fdn"></span>.</p>
+          <p>On vous rappelle dans la journée au <b id="fdt"></b> pour vous montrer TigerFlow.</p>
+          <a class="btn btn-o btn-full" href="https://tigerseo13-del.github.io/sastigerflow/inscription.html">Essayer gratuitement</a>
+          <button class="fback" type="button" id="fagain">Envoyer une autre demande</button>
+        </div>
         <p class="rgpd">Vos coordonnées servent uniquement à vous recontacter. <a href="https://tigerseo13-del.github.io/sastigerflow/confidentialite.html">Confidentialité</a></p>
       </form>
     </div>
@@ -943,8 +1024,6 @@ summary:hover{color:var(--o)}
       <details open><summary>Je dois donner ma carte pour l'essai ?</summary><p>Non. 14 jours d'essai sans carte bancaire. À la fin, vous décidez.</p></details>
       <details><summary>J'ai 800 clients dans Excel, je fais comment ?</summary><p>Vous nous envoyez le fichier, on l'importe pour vous, gratuitement, sous 24 h. Zéro ligne à ressaisir.</p></details>
       <details><summary>Mes techniciens ne sont pas à l'aise avec les logiciels.</summary><p>L'appli technicien a trois boutons : ma journée, mon intervention, mon rapport. S'ils savent envoyer un SMS, ils savent utiliser TigerFlow.</p></details>
-      <details><summary>Est-ce que ça gère les contrats annuels avec les syndics ?</summary><p>Oui. Un contrat, ce sont des passages planifiés d'avance et des factures qui partent à la bonne date, sans y penser.</p></details>
-      <details><summary>Et la facturation électronique obligatoire ?</summary><p>Depuis le 1er septembre 2026, toutes les entreprises doivent pouvoir recevoir des factures électroniques. Pour les TPE, PME et micro-entreprises, l'obligation d'en émettre arrive le 1er septembre 2027. La facturation électronique est incluse dans TigerFlow, dès la formule Gratuit.</p></details>
       <details><summary>Et si j'arrête ?</summary><p>Vous résiliez quand vous voulez depuis votre espace, et vous récupérez toutes vos données.</p></details>
       <details><summary>Où sont stockées mes données ?</summary><p>En Europe, chez Amazon Web Services. Elles sont sauvegardées chaque jour.</p></details>
     </div>
@@ -1025,6 +1104,12 @@ summary:hover{color:var(--o)}
   </button>
 </div>
 
+<div class="lb" id="lb" hidden role="dialog" aria-modal="true" aria-label="Capture en grand">
+  <button type="button" class="lb-x" id="lbx" aria-label="Fermer">×</button>
+  <div class="lb-s" id="lbs"><img id="lbi" alt=""></div>
+  <p class="lb-h">Faites glisser pour voir toute la capture</p>
+</div>
+
 <div class="mcta" id="mcta">
   <a class="btn btn-w" href="#rappel">Être rappelé</a>
   <a class="btn btn-o" href="https://tigerseo13-del.github.io/sastigerflow/inscription.html">Essai gratuit</a>
@@ -1040,9 +1125,38 @@ summary:hover{color:var(--o)}
   function bill(a){
     bm.setAttribute('aria-pressed',!a);ba.setAttribute('aria-pressed',a);
     document.querySelectorAll('[data-m]').forEach(function(e){e.textContent=e.getAttribute(a?'data-a':'data-m')});
+    annual=a;totals();
   }
+  var annual=false,tn=document.getElementById('tn');
+  function sp(n){return n.toString().replace(/\B(?=(\d{3})+(?!\d))/g,'\u202f')}
+  function totals(){
+    var n=Math.max(1,Math.min(99,parseInt(tn.value,10)||1));
+    document.querySelectorAll('.tot[data-pm]').forEach(function(e){
+      var v=n*(+e.getAttribute(annual?'data-pa':'data-pm'));
+      e.innerHTML='Pour '+n+' utilisateur'+(n>1?'s':'')+' : <b>'+sp(v)+' € HT</b> par '+(annual?'an':'mois');
+    });
+  }
+  function tstep(k){tn.value=Math.max(1,Math.min(99,(parseInt(tn.value,10)||1)+k));totals()}
+  document.getElementById('tnm').addEventListener('click',function(){tstep(-1)});
+  document.getElementById('tnp').addEventListener('click',function(){tstep(1)});
+  tn.addEventListener('input',totals);totals();
   bm.addEventListener('click',function(){bill(false)});ba.addEventListener('click',function(){bill(true)});
 
+
+  /* === MENU MOBILE === */
+  var bg=document.getElementById('burger'),mn=document.getElementById('mnav');
+  function menu(o){mn.hidden=!o;bg.setAttribute('aria-expanded',o);bg.setAttribute('aria-label',o?'Fermer le menu':'Ouvrir le menu')}
+  bg.addEventListener('click',function(){menu(mn.hidden)});
+  mn.querySelectorAll('a').forEach(function(a){a.addEventListener('click',function(){menu(false)})});
+
+  /* === CAPTURES EN GRAND === */
+  var lb=document.getElementById('lb'),lbi=document.getElementById('lbi'),lbs=document.getElementById('lbs'),lbfrom=null;
+  function zoom(im){if(!im||!im.currentSrc&&!im.src)return;lbfrom=document.activeElement;lbi.src=im.currentSrc||im.src;lbi.alt=im.alt||'';lb.hidden=false;document.documentElement.style.overflow='hidden';lbs.scrollTop=0;lbs.scrollLeft=0;document.getElementById('lbx').focus()}
+  function unzoom(){lb.hidden=true;document.documentElement.style.overflow='';if(lbfrom&&lbfrom.focus)lbfrom.focus()}
+  document.getElementById('lbx').addEventListener('click',unzoom);
+  lb.addEventListener('click',function(e){if(e.target===lb||e.target===lbs)unzoom()});
+  addEventListener('keydown',function(e){if(e.key==='Escape'&&!lb.hidden)unzoom()});
+  document.querySelectorAll('#produit .shot img').forEach(function(im){im.classList.add('zoomable');im.addEventListener('click',function(){zoom(im)})});
 
   /* === VISIONNEUSE DU HERO : onglets + défilement automatique jusqu'au premier clic === */
   var vw=document.getElementById('viewer'),vb=[].slice.call(document.querySelectorAll('.vtabs button')),vi=[].slice.call(vw.querySelectorAll('.vstage img')),vp=document.getElementById('vp'),vc=0,vt=null,vauto=!matchMedia('(prefers-reduced-motion: reduce)').matches,VD=4500;
@@ -1062,9 +1176,16 @@ summary:hover{color:var(--o)}
   vb.forEach(function(b,k){b.addEventListener('click',function(){vauto=false;vgo(k);vrun()})});
   document.getElementById('vprev').addEventListener('click',function(){vauto=false;vgo((vc-1+vi.length)%vi.length);vrun()});
   document.getElementById('vnext').addEventListener('click',function(){vauto=false;vgo((vc+1)%vi.length);vrun()});
+  var vst=vw.querySelector('.vstage'),tx=null,ty=null;vst.classList.add('zoomable');
+  vst.addEventListener('click',function(){zoom(vi[vc])});
+  vst.addEventListener('touchstart',function(e){tx=e.touches[0].clientX;ty=e.touches[0].clientY},{passive:true});
+  vst.addEventListener('touchend',function(e){
+    if(tx===null)return;var dx=e.changedTouches[0].clientX-tx,dy=e.changedTouches[0].clientY-ty;tx=null;
+    if(Math.abs(dx)>45&&Math.abs(dx)>Math.abs(dy)*1.5){e.preventDefault();vauto=false;vgo((vc+(dx<0?1:-1)+vi.length)%vi.length);vrun()}
+  });
   vw.addEventListener('mouseenter',function(){clearTimeout(vt);vp.style.transition='none';vp.style.width='0'});
   vw.addEventListener('mouseleave',function(){vrun()});
-  setTimeout(function(){vload(1);vrun()},3200);
+  setTimeout(function(){vload(1);vrun()},2200);
 
   /* === ENVOI DES DEMANDES (rappel + bulle) ===
      Les demandes partent par e-mail vers LEAD_EMAIL via le service FormSubmit.
@@ -1104,6 +1225,7 @@ summary:hover{color:var(--o)}
     var s=n===1?st1:st2;s.classList.remove('anim');void s.offsetWidth;s.classList.add('anim');
   }
   document.getElementById('cbk').addEventListener('click',function(){cbm.textContent='';goStep(1)});
+  document.getElementById('fagain').addEventListener('click',function(){document.getElementById('fdone').hidden=true;cb.querySelector('.fbar').hidden=false;cb.querySelector('.rgpd').hidden=false;goStep(1)});
   function post(data){
     data._template='table';data._captcha='false';data.Page=location.href;
     return fetch(CALLBACK_URL,{method:'POST',headers:{'Content-Type':'application/json','Accept':'application/json'},body:JSON.stringify(data)})
@@ -1125,7 +1247,12 @@ summary:hover{color:var(--o)}
     var b=document.getElementById('cbs');b.disabled=true;cbm.className='msg';cbm.textContent='Envoi…';
     base._subject='Landing TigerFlow — demande de rappel complète ('+who+')';base.Type='Demande de rappel — complète';
     base['Société']=d.get('societe')||'—';base['Techniciens']=d.get('techniciens')||'non précisé';base['Contact préféré']=d.get('canal');
-    post(base).then(function(){cb.reset();goStep(1);cbm.className='msg ok';cbm.textContent="C'est noté, on vous recontacte dans la journée."})
+    var fn=(d.get('prenom')||'').trim(),ft=(d.get('telephone')||'').trim();
+    post(base).then(function(){
+      cb.reset();cbm.textContent='';st1.hidden=true;st2.hidden=true;cb.querySelector('.fbar').hidden=true;cb.querySelector('.rgpd').hidden=true;
+      document.getElementById('fdn').textContent=fn;document.getElementById('fdt').textContent=ft;
+      var fd=document.getElementById('fdone');fd.hidden=false;fd.focus({preventScroll:true});
+    })
       .catch(function(){cbm.className='msg ko';cbm.textContent="L'envoi n'a pas fonctionné. Réessayez dans un instant."})
       .then(function(){b.disabled=false});
   });
@@ -1162,6 +1289,7 @@ summary:hover{color:var(--o)}
     stage.appendChild(im);simg.push(im);
   });
   stage.appendChild(tag);stage.appendChild(num);prod.classList.add('tour');
+  stage.classList.add('zoomable');stage.addEventListener('click',function(){zoom(simg[cur<0?0:cur])});
   function tour(){
     if(!wide())return;
     var mid=innerHeight/2,best=0,bd=1e9;
@@ -1180,7 +1308,7 @@ summary:hover{color:var(--o)}
   function mark(sel,cls,n,ms){
     document.querySelectorAll(sel).forEach(function(e,i){
       e.classList.add('rv');if(cls)e.classList.add(cls);
-      if(n)e.style.transitionDelay=((i%n)*ms)+'ms';
+      if(n)e.style.transitionDelay=Math.round((i%n)*ms*.45)+'ms';
     });
   }
   mark('main .sec .eyebrow, main .sec .lead, .final p, .final .btn, .final .alt, .final .clock','',0,0);
@@ -1221,7 +1349,7 @@ summary:hover{color:var(--o)}
     e.classList.add('in','seen');
     if(e.classList.contains('plan'))countUp(e.querySelector('.price [data-m]'));
     var d=parseFloat(e.style.transitionDelay)||0;
-    setTimeout(function(){e.style.transitionDelay='';e.classList.remove('rv','rv-l','rv-r','rv-z','in')},d+950);
+    setTimeout(function(){e.style.transitionDelay='';e.classList.remove('rv','rv-l','rv-r','rv-z','in')},d+600);
   }
   if(reduce||!('IntersectionObserver' in window)){els.forEach(function(e){e.classList.remove('rv','rv-l','rv-r','rv-z');e.style.transitionDelay='';e.classList.add('seen')});h2s.forEach(function(h){h.classList.add('seen')})}
   else{
