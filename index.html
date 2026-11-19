@@ -467,6 +467,18 @@ footer nav a:hover{color:var(--o)}
   .cmp tbody .tf::before{content:"TigerFlow";position:static;width:auto;height:auto;margin:0;border-radius:0;background:none;color:var(--o)!important;transform:none!important}
 }
 
+.call input.err{border-color:#D92D20;box-shadow:0 0 0 1px #D92D20;background:#FFFBFA}
+.pdots{display:none;justify-content:center;gap:7px;margin-top:14px}
+.pdots i{width:7px;height:7px;border-radius:50%;background:#3A3F4B;transition:background .2s,width .2s}
+.pdots i.on{background:var(--o);width:20px;border-radius:4px}
+@media(max-width:1000px){.pdots{display:flex}}
+.mcta.off{transform:translateY(110%)!important}
+.chat-pill .tx{max-width:300px;overflow:hidden;white-space:nowrap;transition:max-width .3s ease,opacity .2s}
+.chat.mini .chat-pill{padding:7px;gap:0}
+.chat.mini .chat-pill .tx{max-width:0;opacity:0}
+.chat.mini .chat-pill:hover,.chat.mini .chat-pill:focus-visible{padding:9px 24px 9px 9px;gap:14px}
+.chat.mini .chat-pill:hover .tx,.chat.mini .chat-pill:focus-visible .tx{max-width:300px;opacity:1}
+
 /* ---------- animations ---------- */
 .js .rv{opacity:0;transform:translateY(14px);transition:opacity .38s cubic-bezier(.2,.7,.2,1),transform .38s cubic-bezier(.2,.7,.2,1);will-change:opacity,transform}
 .js .rv.rv-l{transform:translateX(-22px)}
@@ -530,7 +542,7 @@ summary:hover{color:var(--o)}
   .tour .tourcol{position:relative;padding-left:40px}
   .tour .tourcol::before{content:"";position:absolute;left:6px;top:12vh;bottom:12vh;width:2px;background:#DDE0E7;border-radius:2px}
   .tour .rail{display:block;position:absolute;left:6px;top:12vh;width:2px;height:calc(var(--p,0)*(100% - 24vh));background:var(--o);border-radius:2px}
-  .tour .row{display:flex;align-items:center;min-height:72vh;margin:0;position:relative;opacity:.25;transition:opacity .45s}
+  .tour .row{display:flex;align-items:center;min-height:54vh;margin:0;position:relative;opacity:.25;transition:opacity .45s}
   .tour .row.on{opacity:1}
   .tour .row::before{content:"";position:absolute;left:-40px;top:50%;width:14px;height:14px;margin-top:-7px;border-radius:50%;background:var(--bg);border:2px solid #C9CDD6;transition:all .35s;z-index:1}
   .tour .row.on::before{background:var(--o);border-color:var(--o);box-shadow:0 0 0 7px rgba(255,90,31,.18);transform:scale(1.15)}
@@ -656,7 +668,7 @@ summary:hover{color:var(--o)}
     <h1 aria-label="Finissez vos journées à 18 h."><span aria-hidden="true"><span class="wd" style="--i:0"><span>Finissez</span></span> <span class="wd" style="--i:1"><span>vos</span></span> <span class="wd" style="--i:2"><span>journées</span></span> <em><span class="wd" style="--i:3"><span>à</span></span> <span class="wd" style="--i:4"><span><span class="roll"><span class="strip"><i>22</i><i>21</i><i>20</i><i>19</i><i>18</i></span></span> h.</span></span></em></span></h1>
     <p class="sub">Planning, techniciens, devis, factures, encaissement : TigerFlow fait le travail de bureau pendant que vous êtes sur le terrain.</p>
     <div class="cta">
-      <a class="btn btn-o" href="https://tigerseo13-del.github.io/sastigerflow/inscription.html">Je commence mon essai gratuit <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+      <a class="btn btn-o" href="https://tigerseo13-del.github.io/sastigerflow/inscription.html">Essai gratuit 14 jours <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
       <a class="btn btn-w" href="#rappel">Être rappelé</a>
     </div>
     <ul class="ticks">
@@ -779,6 +791,7 @@ summary:hover{color:var(--o)}
       <img loading="lazy" src="tf-m3.webp" width="634" height="1376" alt="Appli technicien TigerFlow : encaissement par carte avec un QR code">
       <img loading="lazy" src="tf-m4.webp" width="634" height="1376" alt="Appli technicien TigerFlow : le rapport d'intervention en PDF">
     </div>
+    <div class="pdots" id="pdots" aria-hidden="true"></div>
   </div>
 </section>
 
@@ -878,7 +891,7 @@ summary:hover{color:var(--o)}
           <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg> 30 documents par mois</li>
           <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg> Facturation électronique</li>
         </ul>
-        <a class="btn btn-w btn-full" href="https://tigerseo13-del.github.io/sastigerflow/inscription.html">Créer mon compte</a>
+        <a class="btn btn-w btn-full" href="https://tigerseo13-del.github.io/sastigerflow/inscription.html">Créer mon compte gratuit</a>
       </div>
       <div class="plan">
         <h3>Équipe</h3>
@@ -890,7 +903,7 @@ summary:hover{color:var(--o)}
           <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg> 20 SMS par mois</li>
           <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg> 20 signatures par mois</li>
         </ul>
-        <a class="btn btn-w btn-full" href="https://tigerseo13-del.github.io/sastigerflow/inscription.html">Essai gratuit</a>
+        <a class="btn btn-w btn-full" href="https://tigerseo13-del.github.io/sastigerflow/inscription.html">Essai gratuit 14 jours</a>
       </div>
       <div class="plan best">
         <span class="tag">Conseillé</span>
@@ -1009,7 +1022,7 @@ summary:hover{color:var(--o)}
           <span class="fdone-i"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg></span>
           <p class="fst">C'est noté, <span id="fdn"></span>.</p>
           <p>On vous rappelle dans la journée au <b id="fdt"></b> pour vous montrer TigerFlow.</p>
-          <a class="btn btn-o btn-full" href="https://tigerseo13-del.github.io/sastigerflow/inscription.html">Essayer gratuitement</a>
+          <a class="btn btn-o btn-full" href="https://tigerseo13-del.github.io/sastigerflow/inscription.html">Essai gratuit 14 jours</a>
           <button class="fback" type="button" id="fagain">Envoyer une autre demande</button>
         </div>
         <p class="rgpd">Vos coordonnées servent uniquement à vous recontacter. <a href="https://tigerseo13-del.github.io/sastigerflow/confidentialite.html">Confidentialité</a></p>
@@ -1039,7 +1052,7 @@ summary:hover{color:var(--o)}
     <svg class="clock" viewBox="0 0 100 100" aria-hidden="true"><circle cx="50" cy="50" r="44"/><path d="M50 10v7M90 50h-7M50 90v-7M10 50h7"/><line class="hh" x1="50" y1="50" x2="50" y2="27"/><line class="mh" x1="50" y1="50" x2="50" y2="17"/><circle class="pin" cx="50" cy="50" r="4"/></svg>
     <h2>Demain à 18 h, vous êtes chez vous.</h2>
     <p>14 jours gratuits. Sans carte. Vos clients importés pour vous.</p>
-    <a class="btn" href="https://tigerseo13-del.github.io/sastigerflow/inscription.html">Je commence mon essai gratuit <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+    <a class="btn" href="https://tigerseo13-del.github.io/sastigerflow/inscription.html">Essai gratuit 14 jours <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
     <a class="alt" href="#rappel">ou être rappelé pour une démo de 15 minutes</a>
   </div>
 </section>
@@ -1220,6 +1233,20 @@ summary:hover{color:var(--o)}
   document.getElementById('nbm').addEventListener('click',function(){stepN(-1)});
   document.getElementById('nbp').addEventListener('click',function(){stepN(1)});
 
+  /* téléphone mis en forme pendant la saisie, champs fautifs signalés */
+  var telIn=document.getElementById('cb').querySelector('[name=telephone]');
+  telIn.addEventListener('input',function(){
+    var v=telIn.value;if(/^\s*\+/.test(v))return;
+    var d=v.replace(/\D/g,'').slice(0,10);telIn.value=d.replace(/(\d{2})(?=\d)/g,'$1 ');
+  });
+  function bad(names){
+    var f=document.getElementById('cb'),first=null;
+    f.querySelectorAll('input.err').forEach(function(i){i.classList.remove('err')});
+    names.forEach(function(n){var i=f.querySelector('[name='+n+']');if(i){i.classList.add('err');if(!first)first=i}});
+    if(first)first.focus();
+  }
+  document.getElementById('cb').addEventListener('input',function(e){if(e.target.classList)e.target.classList.remove('err')});
+
   /* Formulaire en deux étapes : le contact part dès l'étape 1, le complément à l'étape 2. */
   var cb=document.getElementById('cb'),cbm=document.getElementById('cbm'),st1=document.getElementById('st1'),st2=document.getElementById('st2'),step=1;
   function goStep(n){
@@ -1242,8 +1269,10 @@ summary:hover{color:var(--o)}
     if(d.get('site_web'))return;
     var base={'Prénom':d.get('prenom'),'Nom':d.get('nom'),'Téléphone':tel,'E-mail':mail||'—'};
     if(step===1){
-      if(!d.get('prenom').trim()||!d.get('nom').trim()||tel.length<10){cbm.textContent='Indiquez votre prénom, votre nom et un numéro de téléphone valide.';return}
-      if(mail&&!/^[^@\s]+@[^@\s]+\.[^@\s]+$/.test(mail)){cbm.textContent="L'adresse e-mail ne semble pas valide.";return}
+      var miss=[];if(!d.get('prenom').trim())miss.push('prenom');if(!d.get('nom').trim())miss.push('nom');if(tel.length<10)miss.push('telephone');
+      if(miss.length){bad(miss);cbm.textContent=miss.length===1&&miss[0]==='telephone'?'Indiquez un numéro de téléphone valide (10 chiffres).':'Complétez les champs en rouge.';return}
+      if(mail&&!/^[^@\s]+@[^@\s]+\.[^@\s]+$/.test(mail)){bad(['email']);cbm.textContent="L'adresse e-mail ne semble pas valide.";return}
+      bad([]);
       base._subject='Landing TigerFlow — nouveau contact ('+who+')';base.Type='Demande de rappel — étape 1 (coordonnées)';
       post(base).catch(function(){});
       goStep(2);return;
@@ -1253,9 +1282,11 @@ summary:hover{color:var(--o)}
     base['Société']=d.get('societe')||'—';base['Techniciens']=d.get('techniciens')||'non précisé';base['Contact préféré']=d.get('canal');
     var fn=(d.get('prenom')||'').trim(),ft=(d.get('telephone')||'').trim();
     post(base).then(function(){
+      try{sessionStorage.setItem('tf_prenom',fn);sessionStorage.setItem('tf_tel',ft)}catch(e){}
       cb.reset();cbm.textContent='';st1.hidden=true;st2.hidden=true;cb.querySelector('.fbar').hidden=true;cb.querySelector('.rgpd').hidden=true;
       document.getElementById('fdn').textContent=fn;document.getElementById('fdt').textContent=ft;
-      var fd=document.getElementById('fdone');fd.hidden=false;fd.focus({preventScroll:true});
+      var fd=document.getElementById('fdone');fd.hidden=false;
+      location.href='merci.html';
     })
       .catch(function(){cbm.className='msg ko';cbm.textContent="L'envoi n'a pas fonctionné. Réessayez dans un instant."})
       .then(function(){b.disabled=false});
@@ -1372,6 +1403,24 @@ summary:hover{color:var(--o)}
     e.addEventListener('pointermove',function(ev){var b=e.getBoundingClientRect();e.style.setProperty('--mx',(ev.clientX-b.left)+'px');e.style.setProperty('--my',(ev.clientY-b.top)+'px')});
     e.addEventListener('pointerleave',function(){e.style.setProperty('--mx','-500px');e.style.setProperty('--my','-500px')});
   });
+
+  /* barre mobile masquée pendant qu'on remplit le formulaire ; bulle réduite après le haut de page */
+  var mcb=document.getElementById('mcta'),chatEl=document.getElementById('chat');
+  if('IntersectionObserver' in window){
+    new IntersectionObserver(function(es){mcb.classList.toggle('off',es[0].isIntersecting)},{threshold:.25}).observe(document.getElementById('cb'));
+  }
+  addEventListener('scroll',function(){chatEl.classList.toggle('mini',scrollY>500&&document.getElementById('chatbox').hidden)},{passive:true});
+
+  /* points sous la rangée de téléphones (mobile) */
+  var pd=document.getElementById('pdots');
+  pimgs.forEach(function(){pd.appendChild(document.createElement('i'))});
+  function dots(){
+    var c=ph.getBoundingClientRect(),mid=c.left+c.width/2,best=0,bd=1e9;
+    pimgs.forEach(function(im,i){var b=im.getBoundingClientRect(),dd=Math.abs(b.left+b.width/2-mid);if(dd<bd){bd=dd;best=i}});
+    if(ph.scrollLeft<8)best=0;if(ph.scrollLeft+ph.clientWidth>=ph.scrollWidth-8)best=pimgs.length-1;
+    [].forEach.call(pd.children,function(d,i){d.classList.toggle('on',i===best)});
+  }
+  ph.addEventListener('scroll',dots,{passive:true});dots();
 
   var sg=document.getElementById('signs');
   if(reduce||!('IntersectionObserver' in window))sg.classList.add('go');
