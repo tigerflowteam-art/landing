@@ -157,12 +157,16 @@ input[type=range]{width:100%;margin-top:12px;accent-color:var(--o);height:6px}
 
 /* rappel */
 .call{display:grid;grid-template-columns:1fr 1fr;gap:48px;align-items:center;background:var(--bg);border-radius:24px;padding:48px}
-.call form{background:#fff;border-radius:18px;padding:28px;box-shadow:var(--sh);display:grid;gap:14px}
-.call label{font:600 .84rem/1 Inter,sans-serif;color:var(--ink);display:grid;gap:8px}
+.call form{background:#fff;border-radius:18px;padding:32px;box-shadow:var(--sh);display:grid;gap:18px}
+.call label{font:600 .86rem/1 Inter,sans-serif;color:var(--ink);display:grid;gap:10px}
 .call input{font:400 1rem/1 Inter,sans-serif;padding:14px;border:1px solid #D5D8DF;border-radius:10px;width:100%;color:var(--ink)}
 .call input:focus{outline:2px solid var(--o);outline-offset:1px;border-color:var(--o)}
 .call .hp{position:absolute;left:-9999px}
-.call .msg{font-size:.9rem;min-height:1.4em}
+.call .msg{font-size:.9rem}
+.call .msg:empty{display:none}
+.fstep .btn{margin-top:6px}
+.call .stp{padding:4px 0}
+@media(max-width:480px){.call form{padding:24px 20px}}
 .call .msg.ok{color:#067647}.call .msg.ko{color:#B42318}
 @media(max-width:860px){.call{grid-template-columns:1fr;padding:28px 22px;gap:24px}}
 .alt{display:block;margin-top:16px;font-size:.95rem;text-decoration:underline;text-underline-offset:3px;color:#fff}
@@ -267,21 +271,21 @@ footer nav a:hover{color:var(--o)}
 @media(prefers-reduced-motion:reduce){.js .chat-pill,.chat-box{animation:none}}
 
 .pref{border:0;display:grid;grid-template-columns:1fr 1fr;gap:10px}
-.pref legend{font:600 .84rem/1 Inter,sans-serif;color:var(--ink);margin-bottom:8px;grid-column:1/-1}
+.pref legend{font:600 .86rem/1 Inter,sans-serif;color:var(--ink);margin-bottom:12px;grid-column:1/-1}
 .pref label{display:block;cursor:pointer}
 .pref input{position:absolute;opacity:0;width:1px;height:1px;padding:0}
 .pref span{display:flex;align-items:center;justify-content:center;gap:8px;padding:12px;border:1px solid #D5D8DF;border-radius:10px;font:600 .92rem/1 Inter,sans-serif;color:var(--txt);transition:all .15s}
 .pref svg{width:18px;height:18px;color:#1FAF5A}
 .pref input:checked+span{border-color:var(--o);background:var(--o-l);color:var(--ink);box-shadow:0 0 0 1px var(--o)}
 .pref input:focus-visible+span{outline:2px solid var(--o);outline-offset:2px}
-.fbar{display:flex;align-items:center;gap:8px;font:600 .78rem/1 Inter,sans-serif;color:var(--mut)}
+.fbar{display:flex;align-items:center;gap:8px;margin-bottom:6px;font:600 .78rem/1 Inter,sans-serif;color:var(--mut)}
 .fbar i{flex:1;height:5px;border-radius:3px;background:#EEF0F4;transition:background .4s}
 .fbar i.on{background:var(--o)}
-.fstep{display:grid;gap:14px}
+.fstep{display:grid;gap:22px}
 .fstep[hidden]{display:none}
 @keyframes stepIn{from{opacity:0;transform:translateX(24px)}to{opacity:1;transform:none}}
 .js .fstep.anim{animation:stepIn .4s cubic-bezier(.2,.7,.2,1) both}
-.fst{font:700 1.1rem/1.2 Sora,sans-serif;color:var(--ink)}
+.fst{font:700 1.2rem/1.2 Sora,sans-serif;color:var(--ink);margin-top:6px}
 .r2{display:grid;grid-template-columns:1fr 1fr;gap:12px}
 .call label em{font-style:normal;font-weight:400;color:var(--mut)}
 .fback{background:none;border:0;font:500 .86rem/1 Inter,sans-serif;color:var(--mut);cursor:pointer;text-decoration:underline;text-underline-offset:3px;justify-self:center;padding:4px}
