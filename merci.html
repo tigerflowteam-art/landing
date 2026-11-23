@@ -3,7 +3,7 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Merci — on vous rappelle dans la journée | TigerFlow</title>
+<title>Merci — votre démo vidéo est demandée | TigerFlow</title>
 <meta name="robots" content="noindex">
 <link rel="icon" type="image/png" href="tf-favicon.png">
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -68,13 +68,13 @@ footer{background:var(--ink);color:#9CA3AF;padding:26px 0;font-size:.86rem}
     <div class="hero">
       <div class="ck" aria-hidden="true"><svg viewBox="0 0 24 24"><path pathLength="1" d="M5 12.5l4.5 4.5L19 7.5"/></svg></div>
       <h1><span id="hi">Merci</span>, <em>c'est noté.</em></h1>
-      <p class="lead" id="lead">On vous rappelle dans la journée pour vous montrer TigerFlow.</p>
+      <p class="lead" id="lead">On vous contacte dans la journée pour fixer votre démo vidéo de 15 minutes.</p>
     </div>
     <div class="card">
       <h2>Ce qui se passe maintenant</h2>
       <ol>
-        <li><i>1</i><div><b>On vous rappelle dans la journée</b><span>Au numéro que vous venez de nous laisser. Si vous avez choisi WhatsApp, on vous écrit là-bas.</span></div></li>
-        <li><i>2</i><div><b>15 minutes de démonstration</b><span>On partage l'écran et on vous montre TigerFlow sur un cas comme le vôtre : planning, devis, encaissement.</span></div></li>
+        <li><i>1</i><div><b>On vous contacte dans la journée</b><span>Par téléphone ou par WhatsApp, selon votre choix, pour fixer un créneau qui vous convient.</span></div></li>
+        <li><i>2</i><div><b>15 minutes de démonstration en vidéo</b><span>On se retrouve en visio, on partage l'écran et on vous montre TigerFlow sur un cas comme le vôtre : planning, devis, encaissement.</span></div></li>
         <li><i>3</i><div><b>Vous testez gratuitement pendant 14 jours</b><span>Sans carte bancaire. On importe vos clients pour vous si vous le souhaitez.</span></div></li>
       </ol>
     </div>
@@ -82,7 +82,7 @@ footer{background:var(--ink);color:#9CA3AF;padding:26px 0;font-size:.86rem}
       <a class="btn btn-o" href="https://tigerseo13-del.github.io/sastigerflow/inscription.html">Essai gratuit 14 jours <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
       <a class="btn btn-w" href="./">Revenir à la page</a>
     </div>
-    <p class="note">Pas besoin d'attendre notre appel pour essayer.</p>
+    <p class="note">Pas besoin d'attendre la démo pour essayer.</p>
   </div>
 </main>
 <footer>
@@ -93,7 +93,7 @@ footer{background:var(--ink);color:#9CA3AF;padding:26px 0;font-size:.86rem}
   try{
     var p=sessionStorage.getItem('tf_prenom'),t=sessionStorage.getItem('tf_tel');
     if(p)document.getElementById('hi').textContent='Merci '+p;
-    if(t){var l=document.getElementById('lead');l.textContent='On vous rappelle dans la journée au ';var b=document.createElement('b');b.textContent=t;l.appendChild(b);l.appendChild(document.createTextNode(' pour vous montrer TigerFlow.'))}
+    if(t){var l=document.getElementById('lead');l.textContent='On vous contacte dans la journée au ';var b=document.createElement('b');b.textContent=t;l.appendChild(b);l.appendChild(document.createTextNode(' pour fixer votre démo vidéo de 15 minutes.'))}
   }catch(e){}
 })();
 </script>
