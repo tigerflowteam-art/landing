@@ -711,6 +711,30 @@ main h2{max-width:900px;text-wrap:balance}
 .card.ba p span{font-size:.6rem;margin-bottom:9px}
 .card.ba .av{padding-bottom:14px;border-bottom:1px solid #EADFD5}
 .card.ba .ap{font-size:.9rem;font-weight:700;padding-top:14px}
+
+/* 26/11 — titres plus gras (comme la version développée) */
+h1,h2{font-weight:800}
+main h3,.plan h3,.pay h3{font-weight:700}
+.hero .eyebrow{text-wrap:balance}
+/* 26/11 — téléphone : barre du haut, page moins longue */
+@media(max-width:600px){
+  .nav{gap:10px}
+  .nav .logo img,.nav .logo svg{height:30px;width:auto}
+  .nav .btn{padding:10px 14px;font-size:.84rem;white-space:nowrap}
+  .hero .eyebrow{font-size:.66rem;letter-spacing:.1em}
+  .sec{padding:52px 0}
+  /* cartes en bandeau à faire glisser : on voit la suivante dépasser */
+  .grid3:has(.card.ba),.pays,.plans{display:flex!important;overflow-x:auto;scroll-snap-type:x mandatory;gap:12px;margin-left:-24px;margin-right:-24px;padding:4px 24px 14px;scrollbar-width:none;-webkit-overflow-scrolling:touch}
+  .grid3:has(.card.ba)::-webkit-scrollbar,.pays::-webkit-scrollbar,.plans::-webkit-scrollbar{display:none}
+  .grid3:has(.card.ba)>*,.pays>*,.plans>*{flex:0 0 82%;scroll-snap-align:center}
+  .plans>.plan.best{order:-1}
+  .glisse{display:block!important}
+  /* sur téléphone : titre + phrase + écran, sans la liste de détails */
+  #produit .row .txt ul{display:none}
+  #produit .row{margin-top:44px;gap:18px}
+  .signs{display:none!important}
+}
+.glisse{display:none;text-align:center;font-size:.78rem;color:var(--mut);margin-top:2px}
 </style>
 </head>
 <body>
@@ -736,7 +760,7 @@ main h2{max-width:900px;text-wrap:balance}
     <a href="#appli">L'appli technicien</a>
     <a href="#encaissement">L'encaissement</a>
     <a href="#prix">Prix</a>
-    <a href="#rappel">Démo vidéo</a>
+    <a href="#rappel">Réserver une démo</a>
     <a href="#faq">Questions fréquentes</a>
     <a href="https://tigerseo13-del.github.io/sastigerflow/connexion.html">Se connecter</a>
   </div>
@@ -750,7 +774,7 @@ main h2{max-width:900px;text-wrap:balance}
     <p class="sub">Planning, techniciens, devis, factures, encaissement : TigerFlow fait le travail de bureau pendant que vous êtes sur le terrain.</p>
     <div class="cta">
       <a class="btn btn-o" href="https://tigerseo13-del.github.io/sastigerflow/inscription.html">Essai gratuit 14 jours <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
-      <a class="btn btn-w" href="#rappel">Démo vidéo de 15 min</a>
+      <a class="btn btn-w" href="#rappel">Réserver une démo de 15 min</a>
     </div>
     <ul class="ticks">
       <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg> 14 jours gratuits</li>
@@ -912,6 +936,7 @@ main h2{max-width:900px;text-wrap:balance}
         <div class="how"><span class="z">0 € sur place</span><span>Rapport envoyé</span></div>
       </div>
     </div>
+    <p class="glisse" aria-hidden="true">Faites glisser pour voir les 4 cas →</p>
     <p class="paynote"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg> Les paiements par carte passent par Stripe et se retrouvent rattachés à leur facture dans TigerFlow.</p>
   </div>
 </section>
@@ -1062,7 +1087,7 @@ main h2{max-width:900px;text-wrap:balance}
     <div class="call">
       <div>
         <p class="eyebrow">Pas le temps de tester ?</p>
-        <h2 style="font-size:clamp(1.5rem,3vw,2.1rem)">Réservez une démo vidéo de 15 minutes.</h2>
+        <h2 style="font-size:clamp(1.5rem,3vw,2.1rem)">Réservez une démo de 15 minutes, en visio.</h2>
         <p style="margin-top:14px">On vous contacte dans la journée pour fixer un créneau. Ensuite, on se retrouve en visio : on partage l'écran et vous voyez TigerFlow tourner sur un cas comme le vôtre. Sans engagement.</p>
       </div>
       <form id="cb" novalidate>
@@ -1094,7 +1119,7 @@ main h2{max-width:900px;text-wrap:balance}
             <label><input type="radio" name="canal" value="Téléphone" checked><span>Téléphone</span></label>
             <label><input type="radio" name="canal" value="WhatsApp"><span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"/></svg>WhatsApp</span></label>
           </fieldset>
-          <button class="btn btn-o btn-full" type="submit" id="cbs">Réserver ma démo vidéo</button>
+          <button class="btn btn-o btn-full" type="submit" id="cbs">Réserver ma démo</button>
           <button class="fback" type="button" id="cbk">← Modifier mes coordonnées</button>
         </div>
         <a class="btn wa" id="wa1" target="_blank" rel="noopener" hidden>Écrire sur WhatsApp</a>
@@ -1102,7 +1127,7 @@ main h2{max-width:900px;text-wrap:balance}
         <div class="fdone" id="fdone" hidden tabindex="-1">
           <span class="fdone-i"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg></span>
           <p class="fst">C'est noté, <span id="fdn"></span>.</p>
-          <p>On vous contacte dans la journée au <b id="fdt"></b> pour fixer votre démo vidéo.</p>
+          <p>On vous contacte dans la journée au <b id="fdt"></b> pour fixer votre démo en visio.</p>
           <a class="btn btn-o btn-full" href="https://tigerseo13-del.github.io/sastigerflow/inscription.html">Essai gratuit 14 jours</a>
           <button class="fback" type="button" id="fagain">Envoyer une autre demande</button>
         </div>
@@ -1134,7 +1159,7 @@ main h2{max-width:900px;text-wrap:balance}
     <h2>Demain à 18 h, vous êtes chez vous.</h2>
     <p>14 jours gratuits. Sans carte. Vos clients importés pour vous.</p>
     <a class="btn" href="https://tigerseo13-del.github.io/sastigerflow/inscription.html">Essai gratuit 14 jours <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
-    <a class="alt" href="#rappel">ou réserver une démo vidéo de 15 minutes</a>
+    <a class="alt" href="#rappel">ou réserver une démo de 15 minutes</a>
   </div>
 </section>
 </main>
@@ -1159,7 +1184,7 @@ main h2{max-width:900px;text-wrap:balance}
       <nav aria-label="Démarrer">
         <h4>Démarrer</h4>
         <a href="https://tigerseo13-del.github.io/sastigerflow/inscription.html">Créer mon compte</a>
-        <a href="#rappel">Démo vidéo</a>
+        <a href="#rappel">Réserver une démo</a>
         <a href="#faq">Questions fréquentes</a>
         <a href="https://tigerseo13-del.github.io/sastigerflow/connexion.html">Se connecter</a>
       </nav>
@@ -1209,7 +1234,7 @@ main h2{max-width:900px;text-wrap:balance}
 </div>
 
 <div class="mcta" id="mcta">
-  <a class="btn btn-w" href="#rappel">Démo vidéo</a>
+  <a class="btn btn-w" href="#rappel">Réserver une démo</a>
   <a class="btn btn-o" href="https://tigerseo13-del.github.io/sastigerflow/inscription.html">Essai gratuit</a>
 </div>
 
