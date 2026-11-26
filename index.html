@@ -760,6 +760,16 @@ main h3,.plan h3,.pay h3{font-weight:700}
 .js .hero .hnote{animation:fadeUp .8s cubic-bezier(.2,.7,.2,1) .45s both}
 .hero-shot{margin-top:56px}
 @media(max-width:600px){.hero{padding-top:40px}.hero-shot{margin-top:36px}}
+.hero{text-align:left}
+.hero .w>.eyebrow,.hero .w>h1,.hero .w>.sub,.hero .w>.cta,.hero .w>.hnote,.hero .w>.ticks{max-width:1120px;margin-left:auto!important;margin-right:auto!important}
+.hero .w>h1,.hero .w>.sub{padding-right:28%}
+.hero .cta,.hero .ticks{justify-content:flex-start}
+.hero::before{left:28%}
+@media(max-width:760px){.hero .w>h1,.hero .w>.sub{padding-right:0}}
+.hero .hpill{display:inline-block!important;background:#FFF1EA;border:1px solid #F5C3AC;border-radius:99px;padding:8px 14px;font-weight:800;letter-spacing:.1em}
+.hero .w>.hpill{margin-left:max(0px,calc((100% - 1120px)/2))!important}
+.hero .sub b,.hero .hnote b{color:var(--ink);font-weight:700}
+.hero .sub{max-width:none}
 </style>
 </head>
 <body>
@@ -794,14 +804,14 @@ main h3,.plan h3,.pay h3{font-weight:700}
 <main>
 <section class="hero">
   <div class="w">
-    <p class="eyebrow">Dératisation · Désinsectisation · Désinfection</p>
-    <h1 aria-label="Le logiciel de dératisation, du devis à l'encaissement."><span aria-hidden="true"><span class="wd" style="--i:0"><span>Le</span></span> <span class="wd" style="--i:1"><span>logiciel</span></span> <span class="wd" style="--i:2"><span>de</span></span> <span class="wd" style="--i:3"><span>dératisation,</span></span><br><em><span class="wd" style="--i:4"><span>du</span></span> <span class="wd" style="--i:5"><span>devis</span></span> <span class="wd" style="--i:6"><span>à</span></span> <span class="wd" style="--i:7"><span>l'encaissement.</span></span></em></span></h1>
-    <p class="sub">Planning, devis, factures, paiement : tout au même endroit.</p>
+    <p class="eyebrow hpill">Enfin un logiciel fait pour la 3D</p>
+    <h1>Le logiciel des entreprises <em>antinuisibles</em></h1>
+    <p class="sub">Planning, techniciens, devis, factures, encaissement : une seule fois, au même endroit. Vos techniciens ont leur journée dans la poche, <b>vos impayés se relancent tout seuls</b>, et vos soirées ne servent plus à faire de la paperasse.</p>
     <div class="cta">
-      <a class="btn btn-o" href="https://tigerseo13-del.github.io/sastigerflow/inscription.html">Essai gratuit 14 jours <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+      <a class="btn btn-o" href="https://tigerseo13-del.github.io/sastigerflow/inscription.html">Je commence mon essai gratuit <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
       <a class="btn btn-w" href="#rappel">Réserver une démo de 15 min</a>
     </div>
-    <p class="hnote">Sans carte bancaire · sans engagement</p>
+    <p class="hnote">Vous avez déjà vos clients dans Excel ou un autre logiciel ? <b>On les importe pour vous, gratuitement.</b> Rien à retaper.</p>
     <div class="hero-shot">
     <div class="vtabs" role="tablist" aria-label="Écrans du logiciel"><button type="button" role="tab" aria-selected="true" data-i="0">Calendrier</button><button type="button" role="tab" aria-selected="false" data-i="1">Création de devis</button><button type="button" role="tab" aria-selected="false" data-i="2">Création de contrat</button><button type="button" role="tab" aria-selected="false" data-i="3">Techniciens</button></div>
       <figure class="frame" id="viewer">
