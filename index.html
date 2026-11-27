@@ -995,7 +995,6 @@ summary:hover{color:var(--o)}
           </div>
           <label>Téléphone<input name="telephone" type="tel" inputmode="tel" autocomplete="tel" placeholder="06 12 34 56 78" required></label>
           <label><span>E-mail <em>(facultatif)</em></span><input name="email" type="email" inputmode="email" autocomplete="email" placeholder="vous@societe.fr"></label>
-          <input class="hp" name="site_web" tabindex="-1" autocomplete="off" aria-hidden="true">
           <button class="btn btn-o btn-full" type="submit" id="cbn">Continuer <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></button>
         </div>
         <div class="fstep" id="st2" hidden>
@@ -1109,7 +1108,6 @@ summary:hover{color:var(--o)}
       <input name="societe" placeholder="Votre société" autocomplete="organization" aria-label="Votre société">
       <input name="contact" placeholder="E-mail ou téléphone" autocomplete="email" aria-label="E-mail ou téléphone" required>
       <textarea name="question" rows="3" placeholder="Votre question" aria-label="Votre question" required></textarea>
-      <input class="hp" name="site_web" tabindex="-1" autocomplete="off" aria-hidden="true">
       <button class="btn btn-o" type="submit">Envoyer</button>
       <p class="msg" id="cqm" role="status"></p>
       <a class="btn wa" id="wa2" target="_blank" rel="noopener" hidden>Écrire sur WhatsApp</a>
@@ -1267,7 +1265,6 @@ summary:hover{color:var(--o)}
     e.preventDefault();
     var d=new FormData(cb),tel=(d.get('telephone')||'').replace(/[^0-9+]/g,''),mail=(d.get('email')||'').trim(),who=(d.get('prenom')||'').trim()+' '+(d.get('nom')||'').trim();
     cbm.className='msg ko';cbm.textContent='';
-    if(d.get('site_web'))return;
     var base={'Prénom':d.get('prenom'),'Nom':d.get('nom'),'Téléphone':tel,'E-mail':mail||'—'};
     if(step===1){
       var miss=[];if(!d.get('prenom').trim())miss.push('prenom');if(!d.get('nom').trim())miss.push('nom');if(tel.length<10)miss.push('telephone');
@@ -1304,7 +1301,6 @@ summary:hover{color:var(--o)}
     e.preventDefault();
     var d=new FormData(cq),c=(d.get('contact')||'').trim(),q=(d.get('question')||'').trim();
     cqm.className='msg ko';
-    if(d.get('site_web'))return;
     if(c.length<6||q.length<3){cqm.textContent='Indiquez un e-mail ou un téléphone, et votre question.';return}
     sendLead({_subject:'Landing TigerFlow — question',Type:'Question (bulle Floriant)','Société':d.get('societe')||'—','Contact':c,'Question':q},cq,cqm,'Bien reçu, Floriant vous répond dans la journée.');
   });
